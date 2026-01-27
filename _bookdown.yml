@@ -1,0 +1,14 @@
+delete_merged_file: true
+output_dir: "docs"
+language:
+  ui:
+    chapter_name:
+rmd_files:
+  - index.Rmd
+  - 00-Introduction.Rmd
+  - 01-Cadre_Théorique.Rmd
+  - 02-Modelisation.Rmd
+  - 03-EPB.Rmd
+  - 04-Exercice.Rmd
+
+

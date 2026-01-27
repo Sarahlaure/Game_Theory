@@ -1,0 +1,783 @@
+/* =========================
+   THEME GLOBAL (BLEU)
+========================= */
+:root{
+  --blue: #2166d1;
+  --blue-dark: #1742a6;
+  --blue-light: #f0f4ff;
+  --blue-border: #d0def7;
+  --text: #2c2c2c;
+  --muted: #666;
+  --code-bg: #f6f6f6;
+  --inline-code-bg: #f0f0f0;
+}
+
+/* ===== Style général ===== */
+body{
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.65;
+  font-size: 17px;
+  color: var(--text);
+  background: #fff;
+  padding-bottom: 30px;
+}
+
+/* 1. On libère l'espace pour que le contenu puisse s'étendre */
+.book .book-body .page-wrapper .page-inner {
+    max-width: 100% !important; 
+    overflow: visible !important;
+}
+
+/* 2. On définit la classe qui force le 100% de largeur */
+.full-width-wrapper {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    background: #0A1C34; /* Couleur de secours */
+}
+/* ===== Titres ===== */
+h1, h2, h3, h4, h5{
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* ===== Liens ===== */
+a{
+  color: var(--blue);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
+
+/* ===== Table des matières (sidebar) ===== */
+.book .book-summary{
+  background: var(--blue-light);
+  border-right: 1px solid var(--blue-border);
+}
+.book .book-summary a{
+  color: var(--blue);
+}
+.book .book-summary ul.summary li a:hover{
+  background-color: var(--blue-border);
+  color: var(--blue-dark);
+  text-decoration: none;
+  border-radius: 4px;
+  padding-left: 10px;
+  transition: background-color .25s, color .25s;
+}
+.book .book-summary ul.summary li.active > a{
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+/* ===== Barre supérieure ===== */
+.book .book-header{
+  background-color: var(--blue) !important;
+  color: #fff !important;
+  border-bottom: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.10);
+}
+.book .book-header .btn,
+.book .book-header .toggle-nav,
+.book .book-header h1,
+.book .book-header .dropdown-toggle{
+  color: #fff !important;
+  opacity: 1 !important;
+}
+.book .book-header .btn:hover{
+  background-color: var(--blue-dark) !important;
+  color: #fff !important;
+}
+
+/* ===== Encadrés (blockquote) ===== */
+.book .book-body .page-wrapper .page-inner blockquote,
+blockquote{
+  background: #e8f0fe;
+  border-left: 5px solid var(--blue);
+  padding: 10px 15px;
+  font-style: italic;
+}
+
+/* ===== Code ===== */
+pre{
+  background: var(--code-bg);
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+code{
+  background: var(--inline-code-bg);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 90%;
+}
+
+/* ===== Tableaux ===== */
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+table th, table td{
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+table th{
+  background-color: var(--blue-border);
+  color: var(--blue-dark);
+}
+
+/* ===== Style optionnel pour h2 (si tu veux un accent visuel) ===== */
+.book .book-body h2{
+  border-left: 4px solid var(--blue);
+  padding-left: 10px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/* Réduit l'espace blanc en haut sur la page de garde */
+.book .book-body .page-wrapper .page-inner {
+  padding-top: 20px !important;
+}
+
+/* ===== COVER PAGE (gitbook) ===== */
+.cover-wrap{
+  max-width: 1250px;
+  margin: 22px auto 10px auto;
+  padding: 16px;
+}
+
+.cover-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, rgba(23,66,166,.12), rgba(33,102,209,.04));
+  border: 1px solid rgba(23,66,166,.18);
+  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+}
+
+.cover-badge{
+  font-weight: 900;
+  color:#1742a6;
+  letter-spacing:.04em;
+}
+
+.cover-year{
+  font-size:12px;
+  color:#4b5563;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+}
+
+.cover-logos{
+  margin-top:18px;
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.cover-logo{
+  width: 260px;
+  text-align:center;
+}
+
+.cover-logo img{
+  width: 88px;
+  max-width:100%;
+  display:block;
+  margin:0 auto;
+}
+
+.cover-logo:nth-child(2) img{ width: 72px; }
+.cover-logo:nth-child(3) img{ width: 56px; }
+
+.cover-logo div{
+  margin-top:8px;
+  font-size:12.5px;
+  color:#6b7280;
+  line-height:1.35;
+  font-style: italic;
+}
+
+.cover-card{
+  margin-top:18px;
+  border-radius: 22px;
+  border: 1px solid rgba(23,66,166,.18);
+  background:
+    radial-gradient(1200px 320px at 50% -20%, rgba(33,102,209,.20), transparent 60%),
+    linear-gradient(180deg, rgba(33,102,209,.10) 0%, rgba(255,255,255,.90) 55%, rgba(255,255,255,.96) 100%);
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+  padding: 22px 18px 18px 18px;
+  text-align:center;
+}
+
+.cover-subtitle{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  background: rgba(23,66,166,.10);
+  border: 1px solid rgba(23,66,166,.22);
+  color:#1742a6;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+}
+
+.cover-title{
+  font-size:34px;
+  font-weight:950;
+  color:#1742a6;
+  line-height:1.15;
+  margin: 12px 0 10px 0;
+}
+
+.cover-line{
+  height:4px;
+  width:120px;
+  margin: 10px auto 14px auto;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2166d1, rgba(33,102,209,.15));
+}
+
+.cover-spark{
+  width:150px;
+  max-width:100%;
+  display:block;
+  margin: 6px auto 14px auto;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,.10));
+}
+
+.cover-grid{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:10px;
+  text-align:left;
+}
+
+.cover-box{
+  flex:1;
+  min-width:300px;
+  background: rgba(255,255,255,.90);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.cover-kicker{
+  font-size:16px;
+  color:#6b7280;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  margin-bottom:8px;
+}
+
+.cover-names{
+  font-weight:900;
+  color:#111827;
+  line-height:1.75;
+}
+
+.cover-supervisor{
+  font-weight:950;
+  color:#111827;
+  margin-bottom:6px;
+}
+
+.cover-note{
+  margin-top:8px;
+  font-size:13px;
+  color:#6b7280;
+  line-height:1.5;
+  font-style: italic;
+}
+
+.cover-pill{
+  display:inline-block;
+  margin-top:10px;
+  padding:7px 10px;
+  border-radius: 12px;
+  background: rgba(33,102,209,.10);
+  border: 1px solid rgba(33,102,209,.20);
+  color:#1742a6;
+  font-weight:900;
+  font-style: normal;
+}
+
+/* =========================================================
+   COVER PAGE — styles stables pour bookdown::gitbook
+   ========================================================= */
+
+/* Fond général (gitbook) */
+.book .book-body .page-wrapper .page-inner{
+  background: #fcfdfe !important;
+}
+
+/* Scoping : tout le style est limité à .cover-page */
+.cover-page{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 10px 40px 10px;
+}
+
+/* Logos header */
+.cover-logos{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 10px auto 28px auto;
+}
+
+.cover-logo{
+  flex: 1;
+  text-align: center;
+}
+
+.cover-logo img{
+  height: 82px;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+}
+
+.cover-logo-caption{
+  font-size: 0.72em;
+  font-weight: 800;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.cover-mid{
+  flex: 1;
+  text-align: center;
+  padding: 10px 18px;
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+}
+
+.cover-mid-text{
+  font-size: 0.72em;
+  font-weight: 700;
+  color: #475569;
+  line-height: 1.35;
+}
+
+.cover-mid-text span{
+  font-weight: 900;
+  color: #0A1C34;
+}
+
+/* Carte centrale */
+.cover-card{
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 56px 46px 40px 46px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-card::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #0A1C34 0%, #2D7FF9 50%, #0A1C34 100%);
+}
+
+/* Badge */
+.cover-badge{
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(45,127,249,0.10);
+  color: #2D7FF9;
+  border: 1px solid rgba(45,127,249,0.20);
+  font-size: 0.82em;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  margin-bottom: 18px;
+}
+
+/* Titres */
+.cover-title{
+  font-size: 2.55em;
+  font-weight: 950;
+  color: #0A1C34;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+}
+
+.cover-subtitle{
+  font-size: 1.18em;
+  color: #475569;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 860px;
+  margin: 0 auto 24px auto;
+}
+
+/* Divider */
+.cover-divider{
+  height: 4px;
+  width: 86px;
+  background: #2D7FF9;
+  margin: 20px auto 26px auto;
+  border-radius: 2px;
+}
+
+/* Grid infos */
+.cover-grid{
+  display: flex;
+  gap: 22px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.cover-box{
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.cover-kicker{
+  font-size: 0.74em;
+  font-weight: 900;
+  color: #2D7FF9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.cover-names{
+  font-size: 1em;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 2.05;
+}
+
+.cover-note{
+  font-size: 0.86em;
+  color: #64748b;
+  margin-top: 10px;
+  line-height: 1.55;
+}
+
+.cover-supervisor{
+  font-size: 1.15em;
+  font-weight: 950;
+  color: #0A1C34;
+  margin-bottom: 6px;
+}
+
+.cover-tag{
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.80em;
+  padding: 8px 12px;
+  background: #fff;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Tech */
+.cover-tech{
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.75em;
+  color: #94a3b8;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .cover-logos{
+    flex-direction: column;
+  }
+  .cover-mid{
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .cover-card{
+    padding: 40px 18px 28px 18px;
+  }
+  .cover-grid{
+    flex-direction: column;
+  }
+  .cover-title{
+    font-size: 2.05em;
+  }
+}
+
+
+---
+
+## ✅ CSS FINAL (à coller dans `style.css`)
+
+> Colle ce bloc **à la fin** de ton `style.css`.
+
+```css
+/* Fond propre */
+.book .book-body .page-wrapper .page-inner{
+  background: #fcfdfe !important;
+}
+
+/* Masquer le h1 auto (page d’accueil) */
+.page-inner > h1:first-of-type{
+  display: none !important;
+}
+
+/* Wrapper cover */
+.cover-page{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 10px 40px 10px;
+}
+
+/* ===== Logos empilés ===== */
+.logos-stack{
+  max-width: 520px;            /* rend la pile compacte et centrée */
+  margin: 8px auto 22px auto;
+  text-align: center;
+}
+
+/* Bloc logo */
+.logo-block{
+  padding: 10px 8px;
+}
+
+.logo-block img{
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+  margin-bottom: 8px;
+}
+
+/* Taille différenciée */
+.logo-min img{ height: 95px; }
+.logo-ansd img{ height: 85px; }
+.logo-ensae img{ height: 85px; }
+
+.logo-caption{
+  font-size: 0.78em;
+  font-weight: 850;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Bandeau projet en bas */
+.project-band{
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.project-band-text{
+  font-size: 0.80em;
+  font-weight: 750;
+  color: #475569;
+  line-height: 1.35;
+  letter-spacing: 0.6px;
+}
+
+.project-band-text span{
+  font-weight: 950;
+  color: #0A1C34;
+}
+
+/* ===== Carte (si tu n’as pas déjà ton CSS cover-card) ===== */
+.cover-card{
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 56px 46px 40px 46px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.cover-card::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #0A1C34 0%, #2D7FF9 50%, #0A1C34 100%);
+}
+
+.cover-badge{
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(45,127,249,0.10);
+  color: #2D7FF9;
+  border: 1px solid rgba(45,127,249,0.20);
+  font-size: 0.82em;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  margin-bottom: 18px;
+}
+
+.cover-title{
+  font-size: 2.55em;
+  font-weight: 950;
+  color: #0A1C34;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.cover-subtitle{
+  font-size: 1.18em;
+  color: #475569;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 860px;
+  margin: 0 auto 24px auto;
+  text-align: center;
+}
+
+.cover-divider{
+  height: 4px;
+  width: 86px;
+  background: #2D7FF9;
+  margin: 20px auto 26px auto;
+  border-radius: 2px;
+}
+
+.cover-grid{
+  display: flex;
+  gap: 22px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.cover-box{
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.cover-kicker{
+  font-size: 0.74em;
+  font-weight: 900;
+  color: #2D7FF9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.cover-names{
+  font-size: 1em;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 2.05;
+}
+
+.cover-note{
+  font-size: 0.86em;
+  color: #64748b;
+  margin-top: 10px;
+  line-height: 1.55;
+}
+
+.cover-supervisor{
+  font-size: 1.15em;
+  font-weight: 950;
+  color: #0A1C34;
+  margin-bottom: 6px;
+}
+
+.cover-tag{
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.80em;
+  padding: 8px 12px;
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.cover-tech{
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.75em;
+  color: #94a3b8;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 900px){
+  .cover-card{ padding: 40px 18px 28px 18px; }
+  .cover-grid{ flex-direction: column; }
+  .cover-title{ font-size: 2.05em; }
+  .logos-stack{ max-width: 92%; }
+}
+
+/* Séparateur avec lignes + étoiles */
+.logo-sep{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px auto;
+  max-width: 520px;
+  opacity: 0.95;
+}
+
+.logo-sep .sep-line{
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #dbe3ee, transparent);
+}
+
+.logo-sep .sep-stars{
+  font-size: 0.85em;
+  color: #94a3b8;       /* gris bleu élégant */
+  letter-spacing: 2px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+

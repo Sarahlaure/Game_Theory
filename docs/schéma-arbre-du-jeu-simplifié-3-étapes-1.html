@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Schéma (arbre du jeu simplifié – 3 étapes) | _main.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Schéma (arbre du jeu simplifié – 3 étapes) | _main.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Schéma (arbre du jeu simplifié – 3 étapes) | _main.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="bjcdr.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li style="text-align:center;">
+  <img src="images/encheres.png" style="max-width:200px; width:100%; height:auto; display:inline-block; margin-bottom:0.35em;">
+</li>
+<li><a href="index.html"> Enchères Séquentielles </a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="1" data-path="introduction-générale.html"><a href="introduction-générale.html"><i class="fa fa-check"></i><b>1</b> Introduction générale</a></li>
+<li class="chapter" data-level="2" data-path="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><i class="fa fa-check"></i><b>2</b> I. Cadre théorique : l’enchère séquentielle comme jeu dynamique à information incomplète (bien unique)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#i.1.-lenchère-comme-jeu-dynamique"><i class="fa fa-check"></i><b>2.1</b> I.1. L’enchère comme jeu dynamique</a></li>
+<li class="chapter" data-level="2.2" data-path="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#i.2.-information-incomplète-et-rôle-de-la-nature"><i class="fa fa-check"></i><b>2.2</b> I.2. Information incomplète et rôle de la Nature</a></li>
+<li class="chapter" data-level="2.3" data-path="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#i.3.-croyances-et-information-révélée-au-cours-du-jeu"><i class="fa fa-check"></i><b>2.3</b> I.3. Croyances et information révélée au cours du jeu</a></li>
+<li class="chapter" data-level="2.4" data-path="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#i.4.-lenchère-séquentielle-comme-jeu-dynamique-bayésien"><i class="fa fa-check"></i><b>2.4</b> I.4. L’enchère séquentielle comme jeu dynamique bayésien</a></li>
+<li class="chapter" data-level="2.5" data-path="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="i.-cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#i.5.-conséquences-analytiques-et-concept-de-solution"><i class="fa fa-check"></i><b>2.5</b> I.5. Conséquences analytiques et concept de solution</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ii.-modélisation.html"><a href="ii.-modélisation.html"><i class="fa fa-check"></i><b>3</b> II. Modélisation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="ii.-modélisation.html"><a href="ii.-modélisation.html#schéma-arbre-du-jeu-simplifié-3-étapes"><i class="fa fa-check"></i><b>3.1</b> Schéma (arbre du jeu simplifié – 3 étapes)</a></li>
+<li class="chapter" data-level="3.2" data-path="ii.-modélisation.html"><a href="ii.-modélisation.html#ii.1.-format-général-de-lenchère-séquentielle-à-bien-unique"><i class="fa fa-check"></i><b>3.2</b> II.1. Format général de l’enchère séquentielle à bien unique</a></li>
+<li class="chapter" data-level="3.3" data-path="ii.-modélisation.html"><a href="ii.-modélisation.html#ii.2.-représentation-de-lenchère-sous-forme-darbre-du-jeu"><i class="fa fa-check"></i><b>3.3</b> II.2. Représentation de l’enchère sous forme d’arbre du jeu</a></li>
+<li class="chapter" data-level="3.4" data-path="ii.-modélisation.html"><a href="ii.-modélisation.html#ii.3.-structure-de-linformation-et-valeurs-privées"><i class="fa fa-check"></i><b>3.4</b> II.3. Structure de l’information et valeurs privées</a></li>
+<li class="chapter" data-level="3.5" data-path="ii.-modélisation.html"><a href="ii.-modélisation.html#ii.4.-stratégies-et-dynamique-décisionnelle"><i class="fa fa-check"></i><b>3.5</b> II.4. Stratégies et dynamique décisionnelle</a></li>
+<li class="chapter" data-level="3.6" data-path="ii.-modélisation.html"><a href="ii.-modélisation.html#ii.5.-concept-de-solution-léquilibre-bayésien-parfait"><i class="fa fa-check"></i><b>3.6</b> II.5. Concept de solution : l’Équilibre Bayésien Parfait</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="bjcdr.html"><a href="bjcdr.html"><i class="fa fa-check"></i><b>4</b> bjcdr</a></li>
+<li class="chapter" data-level="5" data-path="schéma-arbre-du-jeu-simplifié-3-étapes-1.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes-1.html"><i class="fa fa-check"></i><b>5</b> Schéma (arbre du jeu simplifié – 3 étapes)</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publié avec bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="schéma-arbre-du-jeu-simplifié-3-étapes-1" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Schéma (arbre du jeu simplifié – 3 étapes)<a href="schéma-arbre-du-jeu-simplifié-3-étapes-1.html#schéma-arbre-du-jeu-simplifié-3-étapes-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<style>
+.game-tree {
+  --gap-x: 28px;
+  --gap-y: 22px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  margin: 12px 0 6px;
+}
+.game-tree ul {
+  padding-top: var(--gap-y);
+  position: relative;
+  transition: all .2s;
+  margin: 0;
+  padding-left: 0;
+  text-align: center;
+}
+.game-tree li {
+  list-style-type: none;
+  position: relative;
+  padding: var(--gap-y) var(--gap-x) 0 var(--gap-x);
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Branches (traits) */
+.game-tree li::before, .game-tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #666;
+  width: 50%;
+  height: var(--gap-y);
+}
+.game-tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #666;
+}
+.game-tree li:only-child::after, .game-tree li:only-child::before {
+  display: none;
+}
+.game-tree li:only-child {
+  padding-top: 0;
+}
+.game-tree li:first-child::before, .game-tree li:last-child::after {
+  border: 0 none;
+}
+.game-tree li:last-child::before {
+  border-right: 2px solid #666;
+  border-radius: 0 6px 0 0;
+}
+.game-tree li:first-child::after {
+  border-radius: 6px 0 0 0;
+}
+
+/* Trait vertical vers enfants */
+.game-tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #666;
+  width: 0;
+  height: var(--gap-y);
+}
+
+/* Boîtes */
+.node {
+  display: inline-block;
+  padding: 10px 12px;
+  border: 1.5px solid #444;
+  border-radius: 10px;
+  background: #fafafa;
+  min-width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.node .title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.node .meta {
+  color: #333;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eaeaea;
+  font-size: 12px;
+  margin-left: 6px;
+}
+.small {
+  font-size: 12px;
+  color: #444;
+  margin-top: 4px;
+}
+</style>
+
+<div class="game-tree">
+  <ul>
+    <li>
+      <div class="node">
+        <div class="title">Nature</div>
+        <div class="meta">Tire les types (v₁, v₂) ~ F×F</div>
+      </div>
+
+      <ul>
+        <li>
+          <div class="node">
+            <div class="title">Étape 1 <span class="badge">J1</span></div>
+            <div class="meta">Prix p₀ annoncé</div>
+            <div class="small">Décision : rester (C) / se retirer (R)</div>
+          </div>
+
+          <ul>
+            <li>
+              <div class="node">
+                <div class="title">R</div>
+                <div class="meta">J1 se retire</div>
+                <div class="small">Fin : J2 gagne<br>(paiement selon le format)</div>
+              </div>
+            </li>
+
+            <li>
+              <div class="node">
+                <div class="title">C</div>
+                <div class="meta">J1 reste actif</div>
+                <div class="small">Historique h₁ + prix p₁</div>
+              </div>
+
+              <ul>
+                <li>
+                  <div class="node">
+                    <div class="title">Étape 2 <span class="badge">J2</span></div>
+                    <div class="meta">Décision : rester (C) / se retirer (R)</div>
+                  </div>
+
+                  <ul>
+                    <li>
+                      <div class="node">
+                        <div class="title">R</div>
+                        <div class="meta">J2 se retire</div>
+                        <div class="small">Fin : J1 gagne<br>(paiement selon le format)</div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="node">
+                        <div class="title">C</div>
+                        <div class="meta">J2 reste actif</div>
+                        <div class="small">Historique h₂ + prix p₂</div>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <div class="node">
+                            <div class="title">Étape 3 <span class="badge">J1</span></div>
+                            <div class="meta">Décision : rester (C) / se retirer (R)</div>
+                          </div>
+
+                          <ul>
+                            <li>
+                              <div class="node">
+                                <div class="title">R</div>
+                                <div class="meta">J1 se retire</div>
+                                <div class="small">Fin : J2 gagne<br>(paiement selon le format)</div>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div class="node">
+                                <div class="title">C</div>
+                                <div class="meta">J1 reste actif</div>
+                                <div class="small">Le jeu continue (p₃, …)</div>
+                              </div>
+                            </li>
+                          </ul>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </li>
+  </ul>
+</div>
+
+</div>
+<div class="full-width-wrapper">
+<footer style="margin-top: 5em; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <div style="height: 4px; background: linear-gradient(90deg, #0A1C34 0%, #009688 50%, #0A1C34 100%);"></div>
+    
+    <div style="background: linear-gradient(180deg, #0A1C34 0%, #061222 100%); color: #EAF2FF; padding: 40px 0 20px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+
+            <div style="flex: 1.2; min-width: 300px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                    <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(0, 150, 136, 0.2); border: 1px solid rgba(0, 150, 136, 0.4); display: flex; align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 0 15px rgba(0, 150, 136, 0.2);">🗄️</div>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1.15em; font-weight: 700; letter-spacing: 0.5px; color: #fff; text-transform: uppercase;">Jeux dynamiques à information incomplète</h4>
+                        <p style="margin: 0; font-size: 0.85em; color: #009688; font-weight: 600;"> Projet de fin de semestre </p>
+                    </div>
+                </div>
+                <p style="font-size: 0.85em; line-height: 1.6; color: rgba(234,242,255,0.7); margin-bottom: 20px;">
+                    Cours <em>Théorie des jeux </em>: Enchères séquentielles.
+                </p>
+                <div style="padding-left: 10px; border-left: 2px solid #009688; font-style: italic; font-size: 0.82em; color: rgba(234,242,255,0.6);">
+                    "Dans une enchère séquentielle, la valeur d'un bien dépend autant de l'ordre de vente que le l'information révélée par les enchères précédentes"<br>
+                    <span style="font-weight: 700; color: rgba(234,242,255,0.8);">— Robert B. Wilson (Nobel 2020)</span>
+                </div>
+            </div>
+
+            <div style="flex: 1; min-width: 280px; background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+                <h5 style="margin: 0 0 15px 0; font-size: 0.75em; text-transform: uppercase; letter-spacing: 1.5px; color: #009688; text-align: center;">Équipe de réalisation</h5>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.88em; line-height: 2.2;">
+                    <li><span style="color: #009688;">•</span> Awa DIAW</li>
+                    <li><span style="color: #009688;">•</span> Sarah-Laure FOGWOUNG DJOUFACK</li>
+                    <li><span style="color: #009688;">•</span> Fromo Francis HABA</li>
+                    <li><span style="color: #009688;">•</span> Papa Amadou NIANG</li>
+                    <li><span style="color: #009688;">•</span> Nihaviana Albert Paulinah RASAMOELINA</li>
+              
+                </ul>
+            </div>
+
+            <div style="flex: 0.8; min-width: 220px; text-align: right; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: rgba(234,242,255,0.5); margin-bottom: 5px;">Sous la direction de</p>
+                    <p style="font-size: 1em; font-weight: 700; color: #fff; margin: 0;">M. Idrissa DIAGNE</p>
+                    <p style="font-size: 0.85em; color: #009688;">Enseignant de Théorie de jeux _ Directeur de l’ENSAE </p>
+                </div>
+                <div style="margin-top: 30px;">
+                    <div style="font-size: 0.75em; color: rgba(234,242,255,0.4); margin-bottom: 5px;">Promotion ISE2 2025–2026 _ Groupe 1]</div>
+                    <div style="font-size: 0.8em; font-weight: 600; color: rgba(234,242,255,0.6);">© ENSAE Dakar · ANSD </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="max-width: 1100px; margin: 30px auto 0 auto; padding: 20px 20px 0 20px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-size: 0.7em; color: rgba(234,242,255,0.3); letter-spacing: 2px;">
+            Jeux Dynamiques • Signalisation • Equilibre Bayésien • Information incomplète
+        </div>
+    </div>
+</footer>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="bjcdr.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

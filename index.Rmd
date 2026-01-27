@@ -1,0 +1,100 @@
+---
+title: ""
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook:
+    css: style.css
+    toc_depth: 2
+    split_by: chapter
+    config:
+      toc:
+        collapse: section
+      sharing: no
+---
+
+# {-}
+
+```{=html}
+<div class="cover-page">
+
+  <!-- ====== LOGOS (VERTICAL) ====== -->
+  <div class="logos-stack">
+  
+      <div class="logo-block logo-ansd">
+      <div class="logo-caption">Agence nationale de la Statistique et de la Démographie</div>
+      <img src="images/LOGO2.jpg" alt="Logo ANSD Sénégal">
+      
+    </div>
+  
+  <div class="logo-sep" aria-hidden="true">
+    <span class="sep-line"></span>
+    <span class="sep-stars">✦ • ✦ • ✦ • ✦ • ✦ •</span>
+    <span class="sep-line"></span>
+  </div>
+
+    <div class="logo-block logo-ensae">
+      <div class="logo-caption">Ecole nationale de la Statistique et de l'Analyse économique Pierre Ndiaye</div>
+      <img src="images/LOGO1.jpg" alt="Logo ENSAE Dakar">
+    </div>
+
+    <div class="project-band">
+      <div class="project-band-text">
+        PROJET DE FIN DE MODULE<br>
+        <span>Théorie des jeux</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ====== CARTE PRINCIPALE ====== -->
+  <div class="cover-card">
+
+    <div class="cover-badge">ANNÉE ACADÉMIQUE 2025–2026</div>
+
+    <div class="cover-title"> Jeux dynamiques à information incomplète </div>
+
+    <div class="cover-subtitle">
+      Enchères séquentielles : stratégies dynamiques et information incomplète
+    </div>
+
+    <div class="cover-divider"></div>
+
+    <div class="cover-grid">
+
+      <div class="cover-box">
+        <div class="cover-kicker"> Élaboré par</div>
+        <div class="cover-names">
+          Awa DIAW<br/>
+        Sarah-Laure FOGWOUNG DJOUFACK<br/>
+        Fromo Francis HABA<br/>
+        Papa Amadou NIANG<br/>
+        Nihaviana Albert Paulinah RASAMOELINA
+        </div>
+        <div class="cover-note">
+          Ingénieurs Statisticiens Économistes<br>
+          <strong>En 2e année (ISE2)</strong>
+        </div>
+      </div>
+
+      <div class="cover-box">
+        <div class="cover-kicker">Sous la direction de</div>
+        <div class="cover-supervisor">M. Idrissa DIAGNE</div>
+        <div class="cover-note">
+          Enseignant de Théorie de jeux<br>
+          Directeur de l’ENSAE
+        </div>
+        <div class="cover-tag">Livrable de projet académique</div>
+      </div>
+
+    </div>
+
+    <div class="cover-tech">
+     Jeux Dynamiques • Signalisation • Equilibre Bayésien • Information incomplète
+    </div>
+
+  </div>
+
+</div>
+
+```

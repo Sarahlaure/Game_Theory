@@ -1,0 +1,33 @@
+
+digraph G {
+  rankdir=LR;
+  node [shape=box, style="rounded", fontname="Arial", fontsize=10];
+  edge [fontname="Arial", fontsize=10];
+
+  N [label="Nature\nTire (v1,v2) ~ F×F"];
+
+  E1 [label="Étape 1\nPrix p0 annoncé\nJoueur 1"];
+  R1 [label="R : J1 se retire\nFin : J2 gagne\n(paiement selon le format)"];
+  C1 [label="C : J1 reste\nHistorique h1\nPrix p1"];
+
+  E2 [label="Étape 2\nJoueur 2"];
+  R2 [label="R : J2 se retire\nFin : J1 gagne\n(paiement selon le format)"];
+  C2 [label="C : J2 reste\nHistorique h2\nPrix p2"];
+
+  E3 [label="Étape 3\nJoueur 1"];
+  R3 [label="R : J1 se retire\nFin : J2 gagne\n(paiement selon le format)"];
+  C3 [label="C : J1 reste\nLe jeu continue\n(p3, etc.)"];
+
+  N -> E1;
+  E1 -> R1 [label="R"];
+  E1 -> C1 [label="C"];
+  C1 -> E2;
+
+  E2 -> R2 [label="R"];
+  E2 -> C2 [label="C"];
+  C2 -> E3;
+
+  E3 -> R3 [label="R"];
+  E3 -> C3 [label="C"];
+}
+

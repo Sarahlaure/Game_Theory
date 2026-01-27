@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Modélisation | II. Modélisation</title>
+  <meta name="description" content="3 Modélisation | II. Modélisation" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Modélisation | II. Modélisation" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Modélisation | II. Modélisation" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"/>
+<link rel="next" href="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.11/grViz.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li style="text-align:center;">
+  <img src="images/encheres.png" style="max-width:200px; width:100%; height:auto; display:inline-block; margin-bottom:0.35em;">
+</li>
+<li><a href="index.html"> Enchères Séquentielles </a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="1" data-path="introduction-générale.html"><a href="introduction-générale.html"><i class="fa fa-check"></i><b>1</b> Introduction générale</a></li>
+<li class="chapter" data-level="2" data-path="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><i class="fa fa-check"></i><b>2</b> Cadre théorique : l’enchère séquentielle comme jeu dynamique à information incomplète (bien unique)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#lenchère-comme-jeu-dynamique"><i class="fa fa-check"></i><b>2.1</b> L’enchère comme jeu dynamique</a></li>
+<li class="chapter" data-level="2.2" data-path="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#information-incomplète-et-rôle-de-la-nature"><i class="fa fa-check"></i><b>2.2</b> Information incomplète et rôle de la Nature</a></li>
+<li class="chapter" data-level="2.3" data-path="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#croyances-et-information-révélée-au-cours-du-jeu"><i class="fa fa-check"></i><b>2.3</b> Croyances et information révélée au cours du jeu</a></li>
+<li class="chapter" data-level="2.4" data-path="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#lenchère-séquentielle-comme-jeu-dynamique-bayésien"><i class="fa fa-check"></i><b>2.4</b> L’enchère séquentielle comme jeu dynamique bayésien</a></li>
+<li class="chapter" data-level="2.5" data-path="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html"><a href="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html#conséquences-analytiques-et-concept-de-solution"><i class="fa fa-check"></i><b>2.5</b> Conséquences analytiques et concept de solution</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="modélisation.html"><a href="modélisation.html"><i class="fa fa-check"></i><b>3</b> Modélisation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modélisation.html"><a href="modélisation.html#joueurs-types-et-information-initiale"><i class="fa fa-check"></i><b>3.1</b> Joueurs, types et information initiale</a></li>
+<li class="chapter" data-level="3.2" data-path="modélisation.html"><a href="modélisation.html#chronologie-et-structure-des-décisions"><i class="fa fa-check"></i><b>3.2</b> Chronologie et structure des décisions</a></li>
+<li class="chapter" data-level="3.3" data-path="modélisation.html"><a href="modélisation.html#représentation-extensive-et-ensembles-dinformation"><i class="fa fa-check"></i><b>3.3</b> Représentation extensive et ensembles d’information</a></li>
+<li class="chapter" data-level="3.4" data-path="modélisation.html"><a href="modélisation.html#stratégies-et-croyances"><i class="fa fa-check"></i><b>3.4</b> Stratégies et croyances</a></li>
+<li class="chapter" data-level="3.5" data-path="modélisation.html"><a href="modélisation.html#concept-de-solution"><i class="fa fa-check"></i><b>3.5</b> Concept de solution</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html"><a href="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html"><i class="fa fa-check"></i><b>4</b> Equilibre parfait bayésien (EPB) dans l’enchère séquentielle</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html"><a href="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html#justification-de-la-méthode"><i class="fa fa-check"></i><b>4.1</b> Justification de la méthode</a></li>
+<li class="chapter" data-level="4.2" data-path="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html"><a href="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html#définition-opératoire-de-léquilibre-parfait-bayésien"><i class="fa fa-check"></i><b>4.2</b> Définition opératoire de l’équilibre parfait bayésien</a></li>
+<li class="chapter" data-level="4.3" data-path="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html"><a href="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html#signalisation-bluff-et-nature-des-équilibres"><i class="fa fa-check"></i><b>4.3</b> Signalisation, bluff et nature des équilibres</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html"><i class="fa fa-check"></i><b>5</b> Schéma (arbre du jeu simplifié – 3 étapes)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html#énoncé-du-problème"><i class="fa fa-check"></i><b>5.1</b> Énoncé du problème</a></li>
+<li class="chapter" data-level="5.2" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html#déroulement-du-jeu-et-gains"><i class="fa fa-check"></i><b>5.2</b> Déroulement du jeu et gains</a></li>
+<li class="chapter" data-level="5.3" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html#arbre-du-jeu"><i class="fa fa-check"></i><b>5.3</b> Arbre du jeu</a></li>
+<li class="chapter" data-level="5.4" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html#résolution-induction-rétrograde"><i class="fa fa-check"></i><b>5.4</b> RÉSOLUTION (INDUCTION RÉTROGRADE)</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publié avec bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">II. Modélisation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="modélisation" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Modélisation<a href="modélisation.html#modélisation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Cette partie a pour objectif de formaliser une enchère séquentielle portant sur un <strong>bien unique</strong> à l’aide des outils de la théorie des jeux dynamiques à information incomplète.</p>
+<div id="joueurs-types-et-information-initiale" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Joueurs, types et information initiale<a href="modélisation.html#joueurs-types-et-information-initiale" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Le jeu met en présence deux enchérisseurs, notés <span class="math inline">\(i = 1,2\)</span>.</p>
+<p>Le joueur 1 est caractérisé par une <strong>valeur privée</strong> pour le bien, notée <span class="math inline">\(v_1\)</span>, qui peut prendre deux valeurs :
+<span class="math display">\[
+v_1 \in \{v_{1H}, v_{1B}\}, \quad v_{1H} &gt; v_{1B}.
+\]</span></p>
+<p>La valeur <span class="math inline">\(v_1\)</span> est tirée par la Nature au début du jeu selon la distribution :
+<span class="math display">\[
+P(v_1 = v_{1H}) = q, \quad P(v_1 = v_{1B}) = 1 - q.
+\]</span></p>
+<p>Le joueur 1 observe parfaitement sa valeur.<br />
+Le joueur 2 ne connaît pas la réalisation de <span class="math inline">\(v_1\)</span> et ne dispose que de la distribution a priori.</p>
+<hr />
+</div>
+<div id="chronologie-et-structure-des-décisions" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Chronologie et structure des décisions<a href="modélisation.html#chronologie-et-structure-des-décisions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>L’enchère se déroule selon une succession d’étapes indexées par des niveaux de prix croissants <span class="math inline">\(p_0 &lt; p_1 &lt; p_2 &lt; \dots\)</span>.</p>
+<p>À chaque étape :
+- un <strong>prix courant</strong> est annoncé ;
+- un joueur désigné prend une décision ;
+- il choisit entre :
+- <strong>rester dans l’enchère</strong> (<span class="math inline">\(C\)</span>),
+- <strong>se retirer définitivement</strong> (<span class="math inline">\(R\)</span>).</p>
+<p>Les décisions de retrait sont <strong>publiquement observables</strong>.<br />
+L’enchère se poursuit tant qu’au moins deux joueurs restent actifs.</p>
+<hr />
+</div>
+<div id="représentation-extensive-et-ensembles-dinformation" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Représentation extensive et ensembles d’information<a href="modélisation.html#représentation-extensive-et-ensembles-dinformation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>L’enchère peut être représentée sous la forme d’un <strong>arbre du jeu</strong>, dont la structure est donnée par le schéma présenté ci-dessous.</p>
+<p><img src="auction_tree.png" width="900" /></p>
+<ul>
+<li>Le nœud initial correspond au tirage du type de J1 par la Nature.</li>
+<li>Les nœuds de décision représentent les choix successifs des joueurs aux différents niveaux de prix.</li>
+<li>Les feuilles correspondent aux issues de l’enchère (retrait d’un joueur ou poursuite du processus).</li>
+</ul>
+<p>À l’étape où le joueur 2 intervient, celui-ci ne connaît pas la valeur de <span class="math inline">\(v_1\)</span>.<br />
+Les nœuds correspondants sont donc regroupés dans un <strong>ensemble d’information</strong>, reflétant son incertitude sur le type de J1.</p>
+<hr />
+</div>
+<div id="stratégies-et-croyances" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Stratégies et croyances<a href="modélisation.html#stratégies-et-croyances" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Une stratégie est un <strong>plan contingent</strong>, précisant pour chaque joueur :</p>
+<ul>
+<li>l’action à entreprendre à chaque nœud de décision,</li>
+<li>conditionnellement à l’historique observé et, le cas échéant, à l’information privée.</li>
+</ul>
+<p>Les croyances du joueur 2 portent sur la valeur de <span class="math inline">\(v_1\)</span> et sont définies sur son ensemble d’information.<br />
+Elles sont notées :
+<span class="math display">\[
+\mu_t = P(v_1 = v_{1H} \mid h_t),
+\]</span>
+où <span class="math inline">\(h_t\)</span> désigne l’historique observé à l’étape <span class="math inline">\(t\)</span>.</p>
+<p>Ces croyances évoluent au cours de l’enchère, à mesure que les décisions observées restreignent l’ensemble des types possibles.</p>
+<hr />
+</div>
+<div id="concept-de-solution" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Concept de solution<a href="modélisation.html#concept-de-solution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Le jeu ainsi défini est analysé à l’aide du concept d’<strong>Équilibre Bayésien Parfait</strong>.</p>
+<p>Ce concept impose :</p>
+<ul>
+<li>que les stratégies soient <strong>séquentiellement rationnelles</strong> à chaque nœud du jeu ;</li>
+<li>que les croyances soient <strong>cohérentes</strong> avec les stratégies et mises à jour conformément à la règle de Bayes.</li>
+</ul>
+<p>La section suivante est consacrée à l’analyse de cet équilibre et à la caractérisation des comportements stratégiques qu’il induit.</p>
+
+</div>
+</div>
+<div class="full-width-wrapper">
+<footer style="margin-top: 5em; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <div style="height: 4px; background: linear-gradient(90deg, #0A1C34 0%, #009688 50%, #0A1C34 100%);"></div>
+    
+    <div style="background: linear-gradient(180deg, #0A1C34 0%, #061222 100%); color: #EAF2FF; padding: 40px 0 20px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+
+            <div style="flex: 1.2; min-width: 300px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                    <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(0, 150, 136, 0.2); border: 1px solid rgba(0, 150, 136, 0.4); display: flex; align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 0 15px rgba(0, 150, 136, 0.2);">🗄️</div>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1.15em; font-weight: 700; letter-spacing: 0.5px; color: #fff; text-transform: uppercase;">Jeux dynamiques à information incomplète</h4>
+                        <p style="margin: 0; font-size: 0.85em; color: #009688; font-weight: 600;"> Projet de fin de semestre </p>
+                    </div>
+                </div>
+                <p style="font-size: 0.85em; line-height: 1.6; color: rgba(234,242,255,0.7); margin-bottom: 20px;">
+                    Cours <em>Théorie des jeux </em>: Enchères séquentielles.
+                </p>
+                <div style="padding-left: 10px; border-left: 2px solid #009688; font-style: italic; font-size: 0.82em; color: rgba(234,242,255,0.6);">
+                    "Dans une enchère séquentielle, la valeur d'un bien dépend autant de l'ordre de vente que le l'information révélée par les enchères précédentes"<br>
+                    <span style="font-weight: 700; color: rgba(234,242,255,0.8);">— Robert B. Wilson (Nobel 2020)</span>
+                </div>
+            </div>
+
+            <div style="flex: 1; min-width: 280px; background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+                <h5 style="margin: 0 0 15px 0; font-size: 0.75em; text-transform: uppercase; letter-spacing: 1.5px; color: #009688; text-align: center;">Équipe de réalisation</h5>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.88em; line-height: 2.2;">
+                    <li><span style="color: #009688;">•</span> Awa DIAW</li>
+                    <li><span style="color: #009688;">•</span> Sarah-Laure FOGWOUNG DJOUFACK</li>
+                    <li><span style="color: #009688;">•</span> Fromo Francis HABA</li>
+                    <li><span style="color: #009688;">•</span> Papa Amadou NIANG</li>
+                    <li><span style="color: #009688;">•</span> Nihaviana Albert Paulinah RASAMOELINA</li>
+              
+                </ul>
+            </div>
+
+            <div style="flex: 0.8; min-width: 220px; text-align: right; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: rgba(234,242,255,0.5); margin-bottom: 5px;">Sous la direction de</p>
+                    <p style="font-size: 1em; font-weight: 700; color: #fff; margin: 0;">M. Idrissa DIAGNE</p>
+                    <p style="font-size: 0.85em; color: #009688;">Enseignant de Théorie de jeux _ Directeur de l’ENSAE </p>
+                </div>
+                <div style="margin-top: 30px;">
+                    <div style="font-size: 0.75em; color: rgba(234,242,255,0.4); margin-bottom: 5px;">Promotion ISE2 2025–2026 _ Groupe 1]</div>
+                    <div style="font-size: 0.8em; font-weight: 600; color: rgba(234,242,255,0.6);">© ENSAE Dakar · ANSD </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="max-width: 1100px; margin: 30px auto 0 auto; padding: 20px 20px 0 20px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-size: 0.7em; color: rgba(234,242,255,0.3); letter-spacing: 2px;">
+            Jeux Dynamiques • Signalisation • Equilibre Bayésien • Information incomplète
+        </div>
+    </div>
+</footer>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cadre-théorique-lenchère-séquentielle-comme-jeu-dynamique-à-information-incomplète-bien-unique.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+---
+title: "Introduction"
+---
+
+# Introduction générale
+
+Les enchères constituent un mécanisme central d’allocation des ressources en économie. De manière générale, une enchère peut être définie comme une procédure de vente par laquelle un ou plusieurs biens sont attribués à des acheteurs potentiels, appelés *enchérisseurs*, sur la base d’offres exprimant le prix qu’ils sont prêts à payer. L’attribution du bien, ainsi que le paiement effectif, dépendent de règles précises qui définissent le format de l’enchère. Ces mécanismes sont utilisés dans des contextes variés, allant des marchés traditionnels — tels que la vente d’œuvres d’art, de biens immobiliers ou de vins rares — à des environnements économiques contemporains à forte intensité stratégique, comme l’attribution de licences de télécommunications, les marchés de l’électricité ou la publicité en ligne.
+
+L’intérêt analytique des enchères réside dans le fait qu’elles mettent en interaction des agents *rationnels* poursuivant des *objectifs individuels*, tout en disposant d’une *information imparfaite*. Chaque enchérisseur cherche à maximiser son gain, généralement défini comme la différence entre la valeur qu’il attribue au bien et le prix effectivement payé, tout en tenant compte à la fois des règles de l’enchère et du comportement anticipé des autres participants. Cette combinaison d’interactions stratégiques et d’asymétrie d’information fait des enchères un objet central de la théorie des jeux.
+
+La littérature économique distingue classiquement les enchères selon plusieurs dimensions.  
+
+- Une première dimension concerne le *nombre de biens mis en vente* : certaines enchères portent sur un bien unique, tandis que d’autres concernent plusieurs biens.
+
+- Une deuxième dimension est la *règle de paiement*. Dans une enchère au premier prix, le gagnant paie le montant exact de son offre, tandis que, dans une enchère au second prix — également appelée enchère de Vickrey — le gagnant est celui qui a soumis l’offre la plus élevée, mais il ne paie que la seconde offre la plus élevée. 
+
+- Une troisième dimension est la *structure de l’information*. Dans les enchères à valeurs privées, chaque enchérisseur connaît sa propre valorisation du bien, mais ignore celles des autres participants. À l’inverse, dans les enchères à valeurs communes, la valeur réelle du bien est identique pour tous, mais elle est incertaine au moment de l’enchère et les enchérisseurs ne disposent que de signaux imparfaits à son sujet.  
+
+- Enfin, les enchères se distinguent par le *mode de soumission des offres*. Dans les enchères simultanées, les enchérisseurs soumettent leurs offres en même temps, sans observer celles des autres. Dans les enchères séquentielles, en revanche, les décisions sont prises dans le temps et les actions passées — offres, retraits ou annonces de prix — sont observables et peuvent influencer les décisions futures.
+
+C’est dans ce cadre général que s’inscrit la notion d’**enchère séquentielle**. Toutefois, la littérature ne propose pas une définition unique de la séquentialité. Selon les sources et les contextes étudiés, celle-ci peut être appréhendée suivant **deux angles distincts**.
+
+Un premier angle, largement adopté dans les travaux consacrés aux enchères multi-objets (Milgrom, 2004 ; Krishna, 2010), définit la séquentialité par le *nombre et l’ordre de mise en vente des biens*. Une enchère est alors dite séquentielle lorsque plusieurs biens sont vendus l’un après l’autre, chaque vente constituant une étape d’un processus intertemporel. Dans ce cadre, les enchérisseurs tiennent compte non seulement de leur valorisation immédiate du bien courant, mais également des opportunités futures, des contraintes budgétaires éventuelles et de l’information révélée par les prix et les résultats des enchères précédentes.
+
+Un second angle, issu d’une approche plus générale de la théorie des jeux dynamiques — notamment chez Aliprantis, Chakrabarti et Miller —, définit la séquentialité par la *structure temporelle de la procédure de décision elle-même*, indépendamment du nombre de biens mis en vente. Selon cette perspective, une enchère peut être qualifiée de séquentielle même lorsqu’un seul bien est en jeu, dès lors que les décisions des agents sont prises successivement et que les actions passées sont observables. Les enchères orales, les enchères ascendantes ou certains mécanismes à prix annoncé illustrent cette conception procédurale de la séquentialité. C'est cette conception que nous privilégierons pour la suite de ce travail.
+
+L’analyse des enchères séquentielles met en évidence trois mécanismes centraux.  
+
+- Tout d’abord, **l’apprentissage**, par lequel les enchérisseurs mettent à jour leurs croyances à partir des actions observées au cours du jeu.  
+- Ensuite, **l’anticipation**, qui conduit les agents à intégrer les conséquences futures de leurs décisions présentes dans leur calcul stratégique.  
+- Enfin, **l’interaction stratégique dynamique**, qui se manifeste par des comportements de signalisation, de retenue ou d’agressivité en fonction des croyances et des anticipations mutuelles.
+
+Dans ce contexte, une question centrale se pose naturellement : *comment la séquentialité modifie-t-elle les stratégies des enchérisseurs et l’issue de l’enchère ?* L’étude de cette question requiert un cadre analytique capable de prendre en compte à la fois la dynamique temporelle du jeu et l’évolution des croyances face à l’information révélée. C’est précisément le rôle de l’**équilibre parfait bayésien**, qui constitue le concept de solution central de ce travail.
+
+Afin d’analyser les enchères séquentielles dans le cadre des jeux dynamiques à information incomplète, ce document est organisé comme suit. La première partie présente l’enchère séquentielle comme un jeu dynamique, en mettant en évidence le rôle de la Nature et de l’asymétrie d’information. La deuxième partie étudie la dynamique du jeu et la formation des croyances. La troisième partie est consacrée à la définition et à l’analyse de l’équilibre parfait bayésien. Enfin, une application théorique et numérique illustre concrètement les mécanismes stratégiques induits par la séquentialité.

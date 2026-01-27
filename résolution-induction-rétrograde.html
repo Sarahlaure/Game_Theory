@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 RÉSOLUTION (INDUCTION RÉTROGRADE) | 04-Exercice.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 RÉSOLUTION (INDUCTION RÉTROGRADE) | 04-Exercice.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 RÉSOLUTION (INDUCTION RÉTROGRADE) | 04-Exercice.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="schéma-arbre-du-jeu-simplifié-3-étapes.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.11/grViz.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li style="text-align:center;">
+  <img src="images/encheres.png" style="max-width:200px; width:100%; height:auto; display:inline-block; margin-bottom:0.35em;">
+</li>
+<li><a href="index.html"> Enchères Séquentielles </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html"><i class="fa fa-check"></i><b>1</b> Schéma (arbre du jeu simplifié – 3 étapes)</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html#énoncé-du-problème"><i class="fa fa-check"></i><b>1.1</b> Énoncé du problème</a></li>
+<li class="chapter" data-level="1.2" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html#déroulement-du-jeu-et-gains"><i class="fa fa-check"></i><b>1.2</b> Déroulement du jeu et gains</a></li>
+<li class="chapter" data-level="1.3" data-path="schéma-arbre-du-jeu-simplifié-3-étapes.html"><a href="schéma-arbre-du-jeu-simplifié-3-étapes.html#arbre-du-jeu"><i class="fa fa-check"></i><b>1.3</b> Arbre du jeu</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="résolution-induction-rétrograde.html"><a href="résolution-induction-rétrograde.html"><i class="fa fa-check"></i><b>2</b> RÉSOLUTION (INDUCTION RÉTROGRADE)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="résolution-induction-rétrograde.html"><a href="résolution-induction-rétrograde.html#étape-1-décision-optimale-du-joueur-2"><i class="fa fa-check"></i><b>2.1</b> Étape 1 : Décision optimale du Joueur 2</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="résolution-induction-rétrograde.html"><a href="résolution-induction-rétrograde.html#espérance-dutilité-de-j2"><i class="fa fa-check"></i><b>2.1.1</b> Espérance d’utilité de J2</a></li>
+<li class="chapter" data-level="2.1.2" data-path="résolution-induction-rétrograde.html"><a href="résolution-induction-rétrograde.html#condition-de-décision"><i class="fa fa-check"></i><b>2.1.2</b> Condition de décision</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="résolution-induction-rétrograde.html"><a href="résolution-induction-rétrograde.html#étape-2-anticipation-du-joueur-1"><i class="fa fa-check"></i><b>2.2</b> Étape 2 : Anticipation du Joueur 1</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="résolution-induction-rétrograde.html"><a href="résolution-induction-rétrograde.html#espérance-dutilité-de-j1"><i class="fa fa-check"></i><b>2.2.1</b> Espérance d’utilité de J1</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="résolution-induction-rétrograde.html"><a href="résolution-induction-rétrograde.html#étape-3-équilibre-parfait-bayésien-epb"><i class="fa fa-check"></i><b>2.3</b> Étape 3 : Équilibre Parfait Bayésien (EPB)</a></li>
+<li class="chapter" data-level="2.4" data-path="résolution-induction-rétrograde.html"><a href="résolution-induction-rétrograde.html#conclusion"><i class="fa fa-check"></i><b>2.4</b> CONCLUSION</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publié avec bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="résolution-induction-rétrograde" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> RÉSOLUTION (INDUCTION RÉTROGRADE)<a href="résolution-induction-rétrograde.html#résolution-induction-rétrograde" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Dans un jeu séquentiel à information incomplète, nous résolvons en partant de la dernière étape pour assurer la <strong>perfection en sous-jeux</strong>.</p>
+<hr />
+<div id="étape-1-décision-optimale-du-joueur-2" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Étape 1 : Décision optimale du Joueur 2<a href="résolution-induction-rétrograde.html#étape-1-décision-optimale-du-joueur-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Le Joueur 2 (J2) observe le prix <span class="math inline">\(p&#39;\)</span> proposé par J1. Il connaît sa propre valeur <span class="math inline">\(v_2\)</span>, mais ignore la valeur <span class="math inline">\(v_1\)</span>.</p>
+<p>Soit <span class="math inline">\(\mu = \mathbb{P}(v_1 | p&#39;)\)</span> la croyance de J2 sur le type de J1 après observation de la surenchère.</p>
+<div id="espérance-dutilité-de-j2" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Espérance d’utilité de J2<a href="résolution-induction-rétrograde.html#espérance-dutilité-de-j2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><strong>S’il accepte (A)</strong> : J2 obtient l’objet avec certitude au prix <span class="math inline">\(p&#39;\)</span>.
+<span class="math display">\[\mathbb{E}[u_2(A)] = v_2 - p&#39;\]</span></li>
+<li><strong>S’il refuse (R)</strong> : J2 n’obtient pas l’objet et ne paie rien.
+<span class="math display">\[\mathbb{E}[u_2(R)] = 0\]</span></li>
+</ol>
+</div>
+<div id="condition-de-décision" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Condition de décision<a href="résolution-induction-rétrograde.html#condition-de-décision" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>J2 accepte si et seulement si :
+<span class="math display">\[\mathbb{E}[u_2(A)] \geq \mathbb{E}[u_2(R)] \implies v_2 - p&#39; \geq 0\]</span></p>
+<blockquote>
+<p>** Stratégie optimale de J2** :
+<span class="math display">\[\boxed{s_2^*(p&#39;, v_2) = \text{Accepter si } p&#39; \leq v_2}\]</span></p>
+<p><em>Note: Cette décision est une <strong>stratégie dominante</strong> au stade de la sous-enchère ; elle ne dépend pas de la croyance <span class="math inline">\(\mu\)</span> car le gain de J2 est indépendant du type de J1 une fois le prix <span class="math inline">\(p&#39;\)</span> fixé.</em></p>
+</blockquote>
+<hr />
+</div>
+</div>
+<div id="étape-2-anticipation-du-joueur-1" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Étape 2 : Anticipation du Joueur 1<a href="résolution-induction-rétrograde.html#étape-2-anticipation-du-joueur-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Le Joueur 1 (J1) anticipe la réponse de J2. Il sait que :
+* Si <span class="math inline">\(p&#39; \leq v_2\)</span>, J2 accepte <span class="math inline">\(\implies\)</span> J1 perd (utilité <span class="math inline">\(0\)</span>).
+* Si <span class="math inline">\(p&#39; &gt; v_2\)</span>, J2 refuse <span class="math inline">\(\implies\)</span> J1 gagne au prix <span class="math inline">\(p&#39;\)</span> (utilité <span class="math inline">\(v_1 - p&#39;\)</span>).</p>
+<p>Comme J1 ne connaît pas <span class="math inline">\(v_2\)</span>, il utilise la fonction de répartition <span class="math inline">\(F\)</span> pour évaluer la probabilité que J2 refuse :
+<span class="math display">\[\mathbb{P}(\text{J2 refuse}) = \mathbb{P}(v_2 &lt; p&#39;) = F(p&#39;)\]</span></p>
+<div id="espérance-dutilité-de-j1" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Espérance d’utilité de J1<a href="résolution-induction-rétrograde.html#espérance-dutilité-de-j1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[EU_1(p&#39; | v_1) = F(p&#39;) \cdot (v_1 - p&#39;) + (1 - F(p&#39;)) \cdot 0\]</span>
+<span class="math display">\[EU_1(p&#39; | v_1) = F(p&#39;) \cdot (v_1 - p&#39;)\]</span></p>
+<p>J1 choisit de surenchérir à <span class="math inline">\(p&#39;\)</span> plutôt que de se retirer à <span class="math inline">\(p\)</span> si et seulement si :
+<span class="math display">\[EU_1(p&#39; | v_1) \geq 0 \implies v_1 \geq p&#39;\]</span></p>
+<hr />
+</div>
+</div>
+<div id="étape-3-équilibre-parfait-bayésien-epb" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Étape 3 : Équilibre Parfait Bayésien (EPB)<a href="résolution-induction-rétrograde.html#étape-3-équilibre-parfait-bayésien-epb" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Un <strong>Équilibre Parfait Bayésien</strong> est un triplet (stratégies, croyances, rationalité) tel que :</p>
+<ol style="list-style-type: decimal">
+<li><strong>Rationalité séquentielle</strong> : J2 suit sa stratégie dominante <span class="math inline">\(v_2 \geq p&#39;\)</span>.</li>
+<li><strong>Action de J1</strong> : J1 propose <span class="math inline">\(p&#39;\)</span> si <span class="math inline">\(v_1\)</span> est suffisamment élevé pour que <span class="math inline">\(EU_1(p&#39;) &gt; 0\)</span>.</li>
+<li><strong>Coyances cohérentes</strong> : J2 maintient des croyances <span class="math inline">\(\mu\)</span> compatibles avec la stratégie de J1 (bien qu’ici, l’action de J2 soit indépendante de ces croyances).</li>
+</ol>
+<hr />
+</div>
+<div id="conclusion" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> CONCLUSION<a href="résolution-induction-rétrograde.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dans cette enchère séquentielle :
+* Le joueur qui décide en dernier (J2) suit une règle de <strong>valeur intrinsèque</strong> : il accepte si le prix est inférieur à sa valeur privée, <strong>indépendamment</strong> de ses croyances sur l’autre joueur.
+* Le premier joueur (J1) fait face à un arbitrage entre la probabilité de gagner (qui augmente avec <span class="math inline">\(p&#39;\)</span>) et la marge bénéficiaire <span class="math inline">\((v_1 - p&#39;)\)</span>.</p>
+<blockquote>
+<p><strong>Résultat remarquable</strong> : Contrairement à d’autres jeux de signalisation, l’asymétrie d’information n’altère pas la décision finale de J2, mais elle conditionne la prise de risque initiale de J1.</p>
+</blockquote>
+</div>
+</div>
+<div class="full-width-wrapper">
+<footer style="margin-top: 5em; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <div style="height: 4px; background: linear-gradient(90deg, #0A1C34 0%, #009688 50%, #0A1C34 100%);"></div>
+    
+    <div style="background: linear-gradient(180deg, #0A1C34 0%, #061222 100%); color: #EAF2FF; padding: 40px 0 20px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+
+            <div style="flex: 1.2; min-width: 300px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                    <div style="width: 45px; height: 45px; border-radius: 12px; background: rgba(0, 150, 136, 0.2); border: 1px solid rgba(0, 150, 136, 0.4); display: flex; align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 0 15px rgba(0, 150, 136, 0.2);">🗄️</div>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1.15em; font-weight: 700; letter-spacing: 0.5px; color: #fff; text-transform: uppercase;">Jeux dynamiques à information incomplète</h4>
+                        <p style="margin: 0; font-size: 0.85em; color: #009688; font-weight: 600;"> Projet de fin de semestre </p>
+                    </div>
+                </div>
+                <p style="font-size: 0.85em; line-height: 1.6; color: rgba(234,242,255,0.7); margin-bottom: 20px;">
+                    Cours <em>Théorie des jeux </em>: Enchères séquentielles.
+                </p>
+                <div style="padding-left: 10px; border-left: 2px solid #009688; font-style: italic; font-size: 0.82em; color: rgba(234,242,255,0.6);">
+                    "Dans une enchère séquentielle, la valeur d'un bien dépend autant de l'ordre de vente que le l'information révélée par les enchères précédentes"<br>
+                    <span style="font-weight: 700; color: rgba(234,242,255,0.8);">— Robert B. Wilson (Nobel 2020)</span>
+                </div>
+            </div>
+
+            <div style="flex: 1; min-width: 280px; background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+                <h5 style="margin: 0 0 15px 0; font-size: 0.75em; text-transform: uppercase; letter-spacing: 1.5px; color: #009688; text-align: center;">Équipe de réalisation</h5>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.88em; line-height: 2.2;">
+                    <li><span style="color: #009688;">•</span> Awa DIAW</li>
+                    <li><span style="color: #009688;">•</span> Sarah-Laure FOGWOUNG DJOUFACK</li>
+                    <li><span style="color: #009688;">•</span> Fromo Francis HABA</li>
+                    <li><span style="color: #009688;">•</span> Papa Amadou NIANG</li>
+                    <li><span style="color: #009688;">•</span> Nihaviana Albert Paulinah RASAMOELINA</li>
+              
+                </ul>
+            </div>
+
+            <div style="flex: 0.8; min-width: 220px; text-align: right; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: rgba(234,242,255,0.5); margin-bottom: 5px;">Sous la direction de</p>
+                    <p style="font-size: 1em; font-weight: 700; color: #fff; margin: 0;">M. Idrissa DIAGNE</p>
+                    <p style="font-size: 0.85em; color: #009688;">Enseignant de Théorie de jeux _ Directeur de l’ENSAE </p>
+                </div>
+                <div style="margin-top: 30px;">
+                    <div style="font-size: 0.75em; color: rgba(234,242,255,0.4); margin-bottom: 5px;">Promotion ISE2 2025–2026 _ Groupe 1]</div>
+                    <div style="font-size: 0.8em; font-weight: 600; color: rgba(234,242,255,0.6);">© ENSAE Dakar · ANSD </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="max-width: 1100px; margin: 30px auto 0 auto; padding: 20px 20px 0 20px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-size: 0.7em; color: rgba(234,242,255,0.3); letter-spacing: 2px;">
+            Jeux Dynamiques • Signalisation • Equilibre Bayésien • Information incomplète
+        </div>
+    </div>
+</footer>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="schéma-arbre-du-jeu-simplifié-3-étapes.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": false,
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

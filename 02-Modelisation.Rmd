@@ -1,0 +1,160 @@
+---
+title: "II. Modélisation"
+output: pdf_document
+header-includes:
+  - \usepackage{tikz}
+---
+
+# Modélisation 
+
+Cette partie a pour objectif de formaliser une enchère séquentielle portant sur un **bien unique** à l’aide des outils de la théorie des jeux dynamiques à information incomplète.  
+
+## Joueurs, types et information initiale
+
+Le jeu met en présence deux enchérisseurs, notés \( i = 1,2 \).
+
+Le joueur 1 est caractérisé par une **valeur privée** pour le bien, notée \( v_1 \), qui peut prendre deux valeurs :
+\[
+v_1 \in \{v_{1H}, v_{1B}\}, \quad v_{1H} > v_{1B}.
+\]
+
+La valeur \( v_1 \) est tirée par la Nature au début du jeu selon la distribution :
+\[
+P(v_1 = v_{1H}) = q, \quad P(v_1 = v_{1B}) = 1 - q.
+\]
+
+Le joueur 1 observe parfaitement sa valeur.  
+Le joueur 2 ne connaît pas la réalisation de \( v_1 \) et ne dispose que de la distribution a priori.
+
+---
+
+## Chronologie et structure des décisions
+
+L’enchère se déroule selon une succession d’étapes indexées par des niveaux de prix croissants \( p_0 < p_1 < p_2 < \dots \).
+
+À chaque étape :
+- un **prix courant** est annoncé ;
+- un joueur désigné prend une décision ;
+- il choisit entre :
+  - **rester dans l’enchère** (\( C \)),
+  - **se retirer définitivement** (\( R \)).
+
+Les décisions de retrait sont **publiquement observables**.  
+L’enchère se poursuit tant qu’au moins deux joueurs restent actifs.
+
+---
+
+## Représentation extensive et ensembles d’information
+
+L’enchère peut être représentée sous la forme d’un **arbre du jeu**, dont la structure est donnée par le schéma présenté ci-dessous.
+
+```{r export_tree_png2, echo=FALSE, message=FALSE, warning=FALSE}
+library(DiagrammeR)
+library(DiagrammeRsvg)
+library(rsvg)
+
+graph <- grViz("
+digraph Auction {
+  graph [ranksep=0.9, nodesep=1.6, bgcolor=white, compound=true]
+  node [fontname='Helvetica', fontsize=12, shape=circle, style=filled,
+        fillcolor='#E3F2FD', color='#1565C0', fontcolor='#0D47A1', penwidth=1.5]
+  edge [fontname='Helvetica', fontsize=10, color='#1976D2', penwidth=1.6]
+
+  N [label='N', fillcolor='#0D47A1', fontcolor=white, shape=doublecircle]
+  J1_H0 [label='1']; J1_B0 [label='1']
+  J2_H1 [label='2']; J2_B1 [label='2']
+  J1_H2 [label='1']; J1_B2 [label='1']
+
+  node [shape=box, style='filled', fillcolor='#F8F9FA', color='#BDBDBD',
+        fontname='Helvetica', fontsize=10, fontcolor='black']
+
+  G_R1_H [label='(0 , v2 - p0)']
+  G_R1_B [label='(0 , v2 - p0)']
+  G_R2_H [label='(v1_H - p1 , 0)']
+  G_R2_B [label='(v1_B - p1 , 0)']
+  G_R3_H [label='(0 , v2 - p2)']
+  G_R3_B [label='(0 , v2 - p2)']
+
+  NEXT_H [label='(v1_H - p3 , ...)', shape=none, fillcolor=white]
+  NEXT_B [label='(v1_B - p3 , ...)', shape=none, fillcolor=white]
+
+  N -> J1_H0 [label='q']
+  N -> J1_B0 [label='1-q']
+
+  J1_H0 -> J2_H1 [label='C (Rester)']
+  J1_H0 -> G_R1_H [label='R (Sortir)']
+
+  J1_B0 -> J2_B1 [label='C (Rester)']
+  J1_B0 -> G_R1_B [label='R (Sortir)']
+
+  J2_H1 -> J1_H2 [label='C']
+  J2_H1 -> G_R2_H [label='R']
+
+  J2_B1 -> J1_B2 [label='C']
+  J2_B1 -> G_R2_B [label='R']
+
+  J1_H2 -> NEXT_H [label='C']
+  J1_H2 -> G_R3_H [label='R']
+
+  J1_B2 -> NEXT_B [label='C']
+  J1_B2 -> G_R3_B [label='R']
+
+  subgraph cluster_info {
+    style='dashed'; color='#1976D2'; penwidth=2.5;
+    label='Ensemble d\\'information de J2 (incertitude sur v1)';
+    fontname='Helvetica-Bold'; fontcolor='#1976D2';
+    J2_H1; J2_B1;
+  }
+}
+")
+
+# Export SVG -> PNG
+svg <- export_svg(graph)
+writeLines(svg, "auction_tree.svg")
+rsvg_png("auction_tree.svg", "auction_tree.png", width = 1800)
+
+```
+
+```{r export_tree_png, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("auction_tree.png")
+```
+
+- Le nœud initial correspond au tirage du type de J1 par la Nature.
+- Les nœuds de décision représentent les choix successifs des joueurs aux différents niveaux de prix.
+- Les feuilles correspondent aux issues de l’enchère (retrait d’un joueur ou poursuite du processus).
+
+À l’étape où le joueur 2 intervient, celui-ci ne connaît pas la valeur de \( v_1 \).  
+Les nœuds correspondants sont donc regroupés dans un **ensemble d’information**, reflétant son incertitude sur le type de J1.
+
+---
+
+## Stratégies et croyances
+
+Une stratégie est un **plan contingent**, précisant pour chaque joueur :
+
+- l’action à entreprendre à chaque nœud de décision,
+- conditionnellement à l’historique observé et, le cas échéant, à l’information privée.
+
+Les croyances du joueur 2 portent sur la valeur de \( v_1 \) et sont définies sur son ensemble d’information.  
+Elles sont notées :
+\[
+\mu_t = P(v_1 = v_{1H} \mid h_t),
+\]
+où \( h_t \) désigne l’historique observé à l’étape \( t \).
+
+Ces croyances évoluent au cours de l’enchère, à mesure que les décisions observées restreignent l’ensemble des types possibles.
+
+---
+
+## Concept de solution
+
+Le jeu ainsi défini est analysé à l’aide du concept d’**Équilibre Bayésien Parfait**.
+
+Ce concept impose :
+
+- que les stratégies soient **séquentiellement rationnelles** à chaque nœud du jeu ;
+- que les croyances soient **cohérentes** avec les stratégies et mises à jour conformément à la règle de Bayes.
+
+La section suivante est consacrée à l’analyse de cet équilibre et à la caractérisation des comportements stratégiques qu’il induit.
+
+

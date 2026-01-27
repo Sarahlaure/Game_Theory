@@ -1,0 +1,53 @@
+# Cadre théorique : l’enchère séquentielle comme jeu dynamique à information incomplète (bien unique)
+
+Cette section établit le cadre théorique mobilisé pour analyser une enchère séquentielle portant sur un bien unique.  
+Conformément à l’angle retenu dans l’introduction, la séquentialité est ici comprise comme une **caractéristique de la procédure de décision**, et non comme la conséquence de la vente successive de plusieurs biens.
+
+L’objectif est de montrer qu’une telle enchère s’inscrit dans la classe des **jeux dynamiques à information incomplète**, et que son analyse requiert des outils spécifiques issus de la théorie des jeux, en particulier le concept d’équilibre parfait bayésien.
+
+## L’enchère comme jeu dynamique
+
+Un jeu dynamique est un jeu dans lequel les décisions des joueurs sont prises **successivement**, selon une chronologie définie. À chaque instant, les joueurs observent certaines informations issues des actions passées avant de choisir leur action courante.
+
+Dans ce type de jeu, une stratégie ne se réduit pas à un choix ponctuel. Elle correspond à un **plan de décision contingent**, précisant l’action à entreprendre pour chaque situation possible, compte tenu de l’historique observé. Cet historique regroupe l’ensemble des actions et événements observables survenus jusqu’à un instant donné, tels que les annonces de prix ou les retraits des autres joueurs.
+
+Une enchère séquentielle à bien unique possède précisément cette structure. Les enchérisseurs prennent des décisions successives — rester dans l’enchère ou se retirer — en observant les actions passées. L’enchère ne peut donc pas être analysée comme un jeu statique, mais comme un processus dynamique dans lequel chaque décision influence les suivantes.
+
+## Information incomplète et rôle de la Nature
+
+L’enchère est également caractérisée par une **information incomplète**. Chaque enchérisseur dispose d’une information privée concernant sa propre valorisation du bien, tandis que les valorisations des autres participants ne sont pas connues.
+
+Formellement, chaque joueur \( i \) est associé à un type \( v_i \), représentant la valeur qu’il attribue au bien. Ces types sont tirés par la Nature au début du jeu selon une distribution de probabilité commune, connue de tous les joueurs. Chaque enchérisseur observe uniquement sa propre valeur, mais pas celles des autres.
+
+La présence de la Nature permet de représenter l’incertitude initiale qui caractérise l’environnement stratégique. 
+
+## Croyances et information révélée au cours du jeu
+
+Face à cette information incomplète, les joueurs forment des **croyances** sur les valeurs privées des autres enchérisseurs. Ces croyances sont conditionnelles à l’information observée au cours du déroulement de l’enchère.
+
+Dans une enchère séquentielle, les actions observables — maintien dans l’enchère à un certain prix ou retrait d’un joueur — jouent un rôle informationnel central. Un retrait à un prix donné indique que la valeur du joueur concerné est inférieure ou égale à ce prix. À l’inverse, la persistance d’un joueur à des niveaux de prix élevés suggère une valorisation plus importante.
+
+Les croyances des enchérisseurs sont alors révisées à mesure que l’enchère progresse, conformément à la règle de Bayes. 
+
+## L’enchère séquentielle comme jeu dynamique bayésien
+
+Une enchère séquentielle à bien unique peut ainsi être formalisée comme un **jeu dynamique bayésien**, combinant trois éléments fondamentaux :
+
+- une structure temporelle explicite, caractérisée par la succession des décisions ;
+
+- une situation d’information incomplète, liée à l’existence de valeurs privées ;
+
+- un système de croyances évolutives, mis à jour à partir des actions observées.
+
+Dans ce cadre, chaque prix observé joue un double rôle. Il représente, d’une part, le coût auquel le bien peut être acquis et, d’autre part, une information stratégique révélant progressivement des éléments sur les valeurs des autres enchérisseurs.
+
+## Conséquences analytiques et concept de solution
+
+L’analyse d’un tel jeu nécessite un concept d’équilibre capable de prendre en compte simultanément la dynamique des décisions et l’évolution des croyances. L’**équilibre parfait bayésien** répond précisément à cette exigence.
+
+Un équilibre parfait bayésien repose sur deux principes complémentaires :  
+
+(i) la **rationalité séquentielle**, selon laquelle les stratégies doivent être optimales à chaque étape du jeu, compte tenu des croyances ;  
+(ii) la **cohérence des croyances**, qui impose que celles-ci soient compatibles avec les stratégies et mises à jour conformément à la règle de Bayes.
+
+Ce cadre constitue la base théorique de l’analyse développée dans la suite de ce travail. 

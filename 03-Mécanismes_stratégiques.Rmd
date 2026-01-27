@@ -1,0 +1,72 @@
+# Equilibre parfait bayésien (EPB) dans l’enchère séquentielle
+
+Cette partie présente le concept de solution utilisé pour analyser l’enchère séquentielle modélisée précédemment et explique comment l’équilibre est construit dans un jeu dynamique à information incomplète.
+
+## Justification de la méthode 
+L’enchère considérée est un jeu dynamique, puisque les décisions des joueurs sont prises successivement, et à information incomplète, car les valeurs attribuées au bien sont privées. Elle est en outre informative, dans la mesure où les actions observées au cours de l’enchère (rester ou se retirer à un certain prix) modifient les croyances des joueurs sur les types de leurs adversaires. Dans un tel contexte, l’équilibre de Nash, conçu pour des jeux statiques, ainsi que l’équilibre de Nash bayésien, ne sont pas suffisants, car ils ne prennent pas en compte la chronologie des décisions et peuvent reposer sur des comportements non crédibles hors du chemin d’équilibre. Le concept de solution approprié est donc l’équilibre parfait bayésien, qui permet d’analyser simultanément la séquentialité des décisions et l’évolution des croyances.
+
+## Définition opératoire de l’équilibre parfait bayésien
+
+L’analyse d’une enchère séquentielle à information incomplète requiert un concept d’équilibre qui tienne compte à la fois de la **chronologie des décisions** et de la **révision des croyances**.  
+Le concept pertinent est l’**équilibre parfait bayésien (EPB)**.
+
+Un EPB est un couple \((\sigma, \mu)\), où :
+
+- \(\sigma\) est un **profil de stratégies complètes**, spécifiant pour chaque joueur l’action à entreprendre à chaque nœud de décision, pour chaque type possible ;
+
+- \(\mu\) est un **système de croyances**, qui assigne, à chaque ensemble d’information, une probabilité aux différents types possibles des autres joueurs.
+
+Le couple \((\sigma, \mu)\) constitue un équilibre parfait bayésien si et seulement si les deux conditions suivantes sont satisfaites.
+
+### (i) Rationalité séquentielle
+
+À chaque étape de l’enchère, le joueur qui agit :
+
+- connaît sa **valeur privée** ;
+- observe l’**historique du jeu** (prix atteints, retraits observés) ;
+- forme une **croyance** \(\mu\) sur le type de l’adversaire ;
+- choisit l’action (rester ou se retirer) qui **maximise son espérance de gain conditionnelle**.
+
+Cette optimalité doit être vérifiée **à tous les nœuds du jeu**, y compris hors du chemin d’équilibre.  
+Elle exclut ainsi les **menaces non crédibles**, c’est-à-dire les comportements qui ne seraient pas rationnels s’ils devaient effectivement être mis en œuvre.
+
+### (ii) Cohérence bayésienne et rôle informationnel des actions
+
+Les croyances ne sont pas arbitraires. Elles doivent être **cohérentes avec les stratégies** et mises à jour selon la **règle de Bayes**, partout où cela est possible.
+
+Dans une enchère séquentielle, les actions observées jouent un rôle informationnel central :
+
+- un **retrait** à un prix \(p\) implique que la valeur du joueur vérifie  
+  \[
+  v_i \leq p ;
+  \]
+
+- une **poursuite de l’enchère** à ce prix implique  
+  \[
+  v_i \geq p .
+  \]
+
+À partir de ces observations, le joueur non informé révise ses croyances selon :
+\[
+\mu_{t+1} = P(v = v_H \mid \text{historique observé}).
+\]
+
+Les décisions prises au cours de l’enchère constituent ainsi des **signaux endogènes**, révélant progressivement de l’information sur les valeurs privées et guidant la dynamique stratégique.
+
+## Signalisation, bluff et nature des équilibres
+
+Dans une enchère séquentielle, les actions des joueurs — en particulier le fait de rester actif ou de se retirer à un certain niveau de prix — ne sont pas de simples décisions mécaniques. Elles jouent un **rôle informationnel** : chaque action observée transmet un message sur la valeur privée du joueur qui agit.
+
+Ce mécanisme relève de la **signalisation stratégique**. Une action constitue un signal crédible lorsqu’elle est **différentiellement coûteuse** selon le type du joueur. En particulier, poursuivre l’enchère à un prix élevé est relativement peu coûteux pour un joueur qui valorise fortement le bien, mais devient risqué, voire non rentable, pour un joueur de faible valorisation. C’est ce différentiel de coût qui permet aux actions de révéler de l’information.
+
+Dans ce contexte, le **bluff** correspond au comportement d’un joueur de type faible qui imite la stratégie d’un type fort, en restant actif à des prix élevés, dans le but d’influencer les croyances de l’adversaire. L’objectif est de faire croire à une valorisation élevée afin de provoquer le retrait prématuré de l’autre joueur. Toutefois, le bluff n’est rationnel que si la probabilité de faire abandonner l’adversaire compense le risque de devoir acquérir le bien à un prix supérieur à sa propre valeur. Il s’agit donc d’un arbitrage stratégique entre gain informationnel et risque de surpaiement.
+
+La manière dont la signalisation est exploitée par les joueurs détermine la **nature de l’équilibre parfait bayésien** observé.
+
+- Dans un **équilibre séparateur**, chaque type de joueur adopte une stratégie distincte. Les actions observées permettent alors d’identifier parfaitement le type : après l’observation de l’action, les croyances a posteriori deviennent dégénérées, c’est-à-dire qu’un type est attribué avec probabilité un. L’asymétrie d’information disparaît et le jeu se transforme, à partir de ce point, en un jeu à information complète.
+
+- À l’inverse, dans un **équilibre mélangeant (ou pooling)**, plusieurs types choisissent volontairement la même stratégie. L’action observée ne permet plus de discriminer entre les types possibles. Les croyances a posteriori restent alors identiques aux croyances a priori, et l’incertitude persiste tout au long de l’enchère. Ce type d’équilibre est typiquement associé à des situations de bluff, où les types faibles parviennent à se rendre indiscernables des types forts.
+
+- Entre ces deux cas extrêmes existent des **équilibres semi-séparateurs**, dans lesquels certains types jouent des stratégies pures tandis que d’autres randomisent entre plusieurs actions. Ces équilibres intermédiaires sont fréquents dans les enchères séquentielles, car ils permettent de concilier incitations à révéler l’information et possibilités limitées de bluff.
+
+
