@@ -1,4 +1,4 @@
-# Schéma (arbre du jeu simplifié – 3 étapes)
+# Exercice pratique
 
 ## Énoncé du problème
 
@@ -54,75 +54,7 @@ Si J2 **refuse (R)** :
 
 ## Arbre du jeu
 
-```{r export_tree_png3, echo=FALSE, message=FALSE, warning=FALSE}
-library(DiagrammeR)
-library(DiagrammeRsvg)
-library(rsvg)
-
-grViz("
-digraph Auction {
-  graph [ranksep=1.5, nodesep=2.5, bgcolor=white]
-  
-  node [fontname='Helvetica-Bold', fontsize=12, shape=circle, style=filled, 
-        fillcolor='#E3F2FD', color='#1565C0', fontcolor='#0D47A1', penwidth=2]
-  edge [fontname='Helvetica', fontsize=11, color='#1976D2', penwidth=1.8]
-
-  # Nature
-  N [label='Nature', fillcolor='#0D47A1', fontcolor=white, shape=doublecircle]
-
-  # Noeuds de décision
-  J1_H [label='J1 (v1 élevé)']
-  J1_B [label='J1 (v1 faible)']
-  J2_H [label='J2']
-  J2_B [label='J2']
-
-  # Feuilles de gains
-  node [shape=box, style='filled', fillcolor='#F8F9FA', color='#BDBDBD', fontname='Courier-Bold']
-  
-  G_J1R_H [label='(0 , v2 - p)']
-  G_J1R_B [label='(0 , v2 - p)']
-  
-  G_J2R_H [label='(v1H - p\\' , 0)']
-  G_J2R_B [label='(v1B - p\\' , 0)']
-  
-  G_J2A_H [label='(0 , v2 - p\\')']
-  G_J2A_B [label='(0 , v2 - p\\')']
-
-  # Alignement
-  {rank=same; G_J1R_H; J1_H}
-  {rank=same; J1_B; G_J1R_B}
-  {rank=same; G_J2R_H; J2_H; G_J2A_H}
-  {rank=same; G_J2A_B; J2_B; G_J2R_B}
-
-  # Arêtes Nature
-  N -> J1_H [label='q']
-  N -> J1_B [label='1 - q']
-
-  # Étape 1 : J1
-  J1_H -> J2_H [label='C : surenchère p\\'']
-  J1_H -> G_J1R_H [label='R : retrait']
-  J1_B -> J2_B [label='C : surenchère p\\'']
-  J1_B -> G_J1R_B [label='R : retrait']
-
-  # Étape 2 : J2
-  J2_H -> G_J2A_H [label='A : accepter']
-  J2_H -> G_J2R_H [label='R : refuser']
-  J2_B -> G_J2A_B [label='A : accepter']
-  J2_B -> G_J2R_B [label='R : refuser']
-
-  # Ensemble d'information
-  subgraph cluster_info {
-    style='dashed,rounded'
-    color='#1565C0'
-    penwidth=3
-    label='Incertitude de J2 sur le type de J1'
-    fontcolor='#1565C0'
-    J2_H
-    J2_B
-  }
-}
-")
-```
+![Arbre du jeu](images/image.png)
 
 ## RÉSOLUTION (INDUCTION RÉTROGRADE)
 
@@ -183,3 +115,4 @@ Dans cette enchère séquentielle :
 * Le premier joueur (J1) fait face à un arbitrage entre la probabilité de gagner (qui augmente avec $p'$) et la marge bénéficiaire $(v_1 - p')$.
 
 > **Résultat remarquable** : Contrairement à d'autres jeux de signalisation, l'asymétrie d'information n'altère pas la décision finale de J2, mais elle conditionne la prise de risque initiale de J1.
+

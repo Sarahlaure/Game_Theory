@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>_main.knit</title>
+  <title>5 Exercice pratique | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="_main.knit" />
+  <meta property="og:title" content="5 Exercice pratique | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="_main.knit" />
+  <meta name="twitter:title" content="5 Exercice pratique | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-générale.html"/>
+<link rel="prev" href="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html"/>
+<link rel="next" href="prolongement-pour-plusieurs-biens.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -145,92 +145,126 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="section" class="section level1 unnumbered">
-<h1 class="unnumbered"></h1>
-<div class="cover-page">
-
-  <!-- ====== LOGOS (VERTICAL) ====== -->
-  <div class="logos-stack">
-  
-      <div class="logo-block logo-ansd">
-      <div class="logo-caption">Agence nationale de la Statistique et de la Démographie</div>
-      <img src="images/LOGO2.jpg" alt="Logo ANSD Sénégal">
-      
-    </div>
-  
-  <div class="logo-sep" aria-hidden="true">
-    <span class="sep-line"></span>
-    <span class="sep-stars">✦ • ✦ • ✦ • ✦ • ✦ •</span>
-    <span class="sep-line"></span>
-  </div>
-
-    <div class="logo-block logo-ensae">
-      <div class="logo-caption">Ecole nationale de la Statistique et de l'Analyse économique Pierre Ndiaye</div>
-      <img src="images/LOGO1.jpg" alt="Logo ENSAE Dakar">
-    </div>
-
-    <div class="project-band">
-      <div class="project-band-text">
-        PROJET DE FIN DE MODULE<br>
-        <span>Théorie des jeux</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ====== CARTE PRINCIPALE ====== -->
-  <div class="cover-card">
-
-    <div class="cover-badge">ANNÉE ACADÉMIQUE 2025–2026</div>
-
-    <div class="cover-title"> Jeux dynamiques à information incomplète </div>
-
-    <div class="cover-subtitle">
-      Enchères séquentielles : stratégies dynamiques et information incomplète
-    </div>
-
-    <div class="cover-divider"></div>
-
-    <div class="cover-grid">
-
-      <div class="cover-box">
-        <div class="cover-kicker"> Élaboré par</div>
-        <div class="cover-names">
-          Awa DIAW<br/>
-        Sarah-Laure FOGWOUNG DJOUFACK<br/>
-        Fromo Francis HABA<br/>
-        Papa Amadou NIANG<br/>
-        Nihaviana Albert Paulinah RASAMOELINA
-        </div>
-        <div class="cover-note">
-          Ingénieurs Statisticiens Économistes<br>
-          <strong>En 2e année (ISE2)</strong>
-        </div>
-      </div>
-
-      <div class="cover-box">
-        <div class="cover-kicker">Sous la direction de</div>
-        <div class="cover-supervisor">M. Idrissa DIAGNE</div>
-        <div class="cover-note">
-          Enseignant de Théorie de jeux<br>
-          Directeur de l’ENSAE
-        </div>
-        <div class="cover-tag">Livrable de projet académique</div>
-      </div>
-
-    </div>
-
-    <div class="cover-tech">
-     Jeux Dynamiques • Signalisation • Equilibre Bayésien • Information incomplète
-    </div>
-
-  </div>
+<div id="exercice-pratique" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Exercice pratique<a href="exercice-pratique.html#exercice-pratique" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="énoncé-du-problème" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Énoncé du problème<a href="exercice-pratique.html#énoncé-du-problème" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Paramètres et information</strong></p>
+<ul>
+<li>Deux joueurs : J1 et J2<br />
+</li>
+<li>La Nature tire les valorisations privées<br />
+<span class="math display">\[
+v_1, v_2 \sim F
+\]</span></li>
+<li>Chaque joueur connaît sa propre valeur mais ignore celle de l’autre<br />
+</li>
+<li>Le prix initial <span class="math inline">\(p\)</span> est fixé par le commissaire-priseur<br />
+</li>
+<li>J2 observe l’action de J1 mais ne connaît pas <span class="math inline">\(v_1\)</span></li>
+</ul>
+</div>
+<div id="déroulement-du-jeu-et-gains" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Déroulement du jeu et gains<a href="exercice-pratique.html#déroulement-du-jeu-et-gains" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Étape 1 – Décision de J1</strong></p>
+<p>J1 choisit :
+- <strong>R</strong> : se retirer<br />
+- <strong>C</strong> : surenchérir à un prix <span class="math inline">\(p&#39; &gt; p\)</span></p>
+<p>Si J1 choisit <strong>R</strong> :
+- J2 gagne l’objet et paie <span class="math inline">\(p\)</span>
+- Gains :
+<span class="math display">\[
+  u_1 = 0, \quad u_2 = v_2 - p
+  \]</span></p>
+<hr />
+<p><strong>Étape 2 – Décision de J2 (si J1 a surenchéri)</strong></p>
+<p>J2 choisit :
+- <strong>A</strong> : accepter le prix <span class="math inline">\(p&#39;\)</span>
+- <strong>R</strong> : refuser</p>
+<p>Si J2 <strong>accepte (A)</strong> :
+- J2 gagne et paie <span class="math inline">\(p&#39;\)</span>
+- Gains :
+<span class="math display">\[
+  u_1 = 0, \quad u_2 = v_2 - p&#39;
+  \]</span></p>
+<p>Si J2 <strong>refuse (R)</strong> :
+- J1 gagne et paie <span class="math inline">\(p&#39;\)</span>
+- Gains :
+<span class="math display">\[
+  u_1 = v_1 - p&#39;, \quad u_2 = 0
+  \]</span></p>
+<hr />
+</div>
+<div id="arbre-du-jeu" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Arbre du jeu<a href="exercice-pratique.html#arbre-du-jeu" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="float">
+<img src="images/image.png" alt="Arbre du jeu" />
+<div class="figcaption">Arbre du jeu</div>
+</div>
+</div>
+<div id="résolution-induction-rétrograde" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> RÉSOLUTION (INDUCTION RÉTROGRADE)<a href="exercice-pratique.html#résolution-induction-rétrograde" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dans un jeu séquentiel à information incomplète, nous résolvons en partant de la dernière étape pour assurer la <strong>perfection en sous-jeux</strong>.</p>
+<hr />
+<div id="étape-1-décision-optimale-du-joueur-2" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Étape 1 : Décision optimale du Joueur 2<a href="exercice-pratique.html#étape-1-décision-optimale-du-joueur-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Le Joueur 2 (J2) observe le prix <span class="math inline">\(p&#39;\)</span> proposé par J1. Il connaît sa propre valeur <span class="math inline">\(v_2\)</span>, mais ignore la valeur <span class="math inline">\(v_1\)</span>.</p>
+<p>Soit <span class="math inline">\(\mu = \mathbb{P}(v_1 | p&#39;)\)</span> la croyance de J2 sur le type de J1 après observation de la surenchère.</p>
+<div id="espérance-dutilité-de-j2" class="section level4 hasAnchor" number="5.4.1.1">
+<h4><span class="header-section-number">5.4.1.1</span> Espérance d’utilité de J2<a href="exercice-pratique.html#espérance-dutilité-de-j2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><strong>S’il accepte (A)</strong> : J2 obtient l’objet avec certitude au prix <span class="math inline">\(p&#39;\)</span>.
+<span class="math display">\[\mathbb{E}[u_2(A)] = v_2 - p&#39;\]</span></li>
+<li><strong>S’il refuse (R)</strong> : J2 n’obtient pas l’objet et ne paie rien.
+<span class="math display">\[\mathbb{E}[u_2(R)] = 0\]</span></li>
+</ol>
+</div>
+<div id="condition-de-décision" class="section level4 hasAnchor" number="5.4.1.2">
+<h4><span class="header-section-number">5.4.1.2</span> Condition de décision<a href="exercice-pratique.html#condition-de-décision" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>J2 accepte si et seulement si :
+<span class="math display">\[\mathbb{E}[u_2(A)] \geq \mathbb{E}[u_2(R)] \implies v_2 - p&#39; \geq 0\]</span></p>
+<blockquote>
+<p>** Stratégie optimale de J2** :
+<span class="math display">\[\boxed{s_2^*(p&#39;, v_2) = \text{Accepter si } p&#39; \leq v_2}\]</span></p>
+<p><em>Note: Cette décision est une <strong>stratégie dominante</strong> au stade de la sous-enchère ; elle ne dépend pas de la croyance <span class="math inline">\(\mu\)</span> car le gain de J2 est indépendant du type de J1 une fois le prix <span class="math inline">\(p&#39;\)</span> fixé.</em></p>
+</blockquote>
+</div>
+</div>
+<div id="étape-2-anticipation-du-joueur-1" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Étape 2 : Anticipation du Joueur 1<a href="exercice-pratique.html#étape-2-anticipation-du-joueur-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Le Joueur 1 (J1) anticipe la réponse de J2. Il sait que :
+* Si <span class="math inline">\(p&#39; \leq v_2\)</span>, J2 accepte <span class="math inline">\(\implies\)</span> J1 perd (utilité <span class="math inline">\(0\)</span>).
+* Si <span class="math inline">\(p&#39; &gt; v_2\)</span>, J2 refuse <span class="math inline">\(\implies\)</span> J1 gagne au prix <span class="math inline">\(p&#39;\)</span> (utilité <span class="math inline">\(v_1 - p&#39;\)</span>).</p>
+<p>Comme J1 ne connaît pas <span class="math inline">\(v_2\)</span>, il utilise la fonction de répartition <span class="math inline">\(F\)</span> pour évaluer la probabilité que J2 refuse :
+<span class="math display">\[\mathbb{P}(\text{J2 refuse}) = \mathbb{P}(v_2 &lt; p&#39;) = F(p&#39;)\]</span></p>
+<div id="espérance-dutilité-de-j1" class="section level4 hasAnchor" number="5.4.2.1">
+<h4><span class="header-section-number">5.4.2.1</span> Espérance d’utilité de J1<a href="exercice-pratique.html#espérance-dutilité-de-j1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math display">\[EU_1(p&#39; | v_1) = F(p&#39;) \cdot (v_1 - p&#39;) + (1 - F(p&#39;)) \cdot 0\]</span>
+<span class="math display">\[EU_1(p&#39; | v_1) = F(p&#39;) \cdot (v_1 - p&#39;)\]</span></p>
+<p>J1 choisit de surenchérir à <span class="math inline">\(p&#39;\)</span> plutôt que de se retirer à <span class="math inline">\(p\)</span> si et seulement si :
+<span class="math display">\[EU_1(p&#39; | v_1) \geq 0 \implies v_1 \geq p&#39;\]</span></p>
+</div>
+</div>
+<div id="étape-3-équilibre-parfait-bayésien-epb" class="section level3 hasAnchor" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Étape 3 : Équilibre Parfait Bayésien (EPB)<a href="exercice-pratique.html#étape-3-équilibre-parfait-bayésien-epb" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un <strong>Équilibre Parfait Bayésien</strong> est un triplet (stratégies, croyances, rationalité) tel que :</p>
+<ol style="list-style-type: decimal">
+<li><strong>Rationalité séquentielle</strong> : J2 suit sa stratégie dominante <span class="math inline">\(v_2 \geq p&#39;\)</span>.</li>
+<li><strong>Action de J1</strong> : J1 propose <span class="math inline">\(p&#39;\)</span> si <span class="math inline">\(v_1\)</span> est suffisamment élevé pour que <span class="math inline">\(EU_1(p&#39;) &gt; 0\)</span>.</li>
+<li><strong>Coyances cohérentes</strong> : J2 maintient des croyances <span class="math inline">\(\mu\)</span> compatibles avec la stratégie de J1 (bien qu’ici, l’action de J2 soit indépendante de ces croyances).</li>
+</ol>
+</div>
+<div id="conclusion" class="section level3 hasAnchor" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> CONCLUSION<a href="exercice-pratique.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dans cette enchère séquentielle :
+* Le joueur qui décide en dernier (J2) suit une règle de <strong>valeur intrinsèque</strong> : il accepte si le prix est inférieur à sa valeur privée, <strong>indépendamment</strong> de ses croyances sur l’autre joueur.
+* Le premier joueur (J1) fait face à un arbitrage entre la probabilité de gagner (qui augmente avec <span class="math inline">\(p&#39;\)</span>) et la marge bénéficiaire <span class="math inline">\((v_1 - p&#39;)\)</span>.</p>
+<blockquote>
+<p><strong>Résultat remarquable</strong> : Contrairement à d’autres jeux de signalisation, l’asymétrie d’information n’altère pas la décision finale de J2, mais elle conditionne la prise de risque initiale de J1.</p>
+</blockquote>
 
 </div>
-
-
+</div>
 </div>
 <div class="full-width-wrapper">
 <footer style="margin-top: 5em; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
@@ -292,8 +326,8 @@
           </div>
         </div>
       </div>
-
-<a href="introduction-générale.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="equilibre-parfait-bayésien-epb-dans-lenchère-séquentielle.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="prolongement-pour-plusieurs-biens.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

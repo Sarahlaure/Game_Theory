@@ -1,0 +1,71 @@
+# Conclusion 
+
+Ce travail a analysé les enchères séquentielles à l’aide du cadre des jeux dynamiques à information incomplète.  
+L’objectif était de montrer que la séquentialité constitue une dimension stratégique centrale qui modifie à la fois les comportements, l’information et les résultats d’allocation.
+
+Dans le cas d’un bien unique, l’enchère séquentielle se caractérise par :
+
+- une chronologie explicite des décisions,
+- une information initialement incomplète liée aux valeurs privées,
+- et une révélation progressive de l’information à travers les actions observées.
+
+Ces caractéristiques rendent inadaptés les concepts d’équilibre statiques.  
+L’équilibre parfait bayésien fournit alors un cadre de résolution cohérent, en imposant simultanément :
+
+- la rationalité séquentielle à chaque étape du jeu,
+- et la cohérence des croyances via la règle de Bayes.
+
+L’extension au cas de plusieurs biens met en évidence des mécanismes spécifiquement dynamiques.  
+La valeur d’option associée aux tours futurs, l’effet de remplacement entre biens, ainsi que la révélation endogène de l’information modifient les incitations individuelles et expliquent des régularités empiriques observées, telles que la baisse progressive des prix ou les stratégies d’intimidation.
+
+Dans l’ensemble, l’analyse montre que les enchères séquentielles constituent des dispositifs où décisions, information et anticipations évoluent conjointement.  
+Elles justifient pleinement l’usage des outils de la théorie des jeux dynamiques bayésiens.
+
+Malgré sa cohérence interne, le cadre théorique retenu repose sur plusieurs hypothèses restrictives.
+
+## Hypothèse de rationalité parfaite
+
+Le modèle suppose que les enchérisseurs :
+
+- sont parfaitement rationnels,
+- anticipent correctement les comportements futurs,
+- et mettent à jour leurs croyances conformément à la règle de Bayes.
+
+En pratique, des limites cognitives ou des heuristiques peuvent conduire à des écarts systématiques par rapport aux prédictions théoriques.
+
+## Absence de contraintes budgétaires explicites
+
+Les modèles standards abstraient généralement des contraintes de liquidité.  
+Or, dans de nombreuses enchères réelles, les budgets limités, les coûts de financement ou les restrictions institutionnelles influencent fortement les stratégies.
+
+## Structure simplifiée de l’information
+
+L’analyse repose sur :
+- un nombre fini de types,
+- des distributions communes connues,
+- et une observation parfaite des actions passées.
+
+Dans les contextes réels, l’information peut être bruitée, partielle ou imparfaitement observée, ce qui complique la formation et la mise à jour des croyances.
+
+## Absence de comportements collusifs et de règles institutionnelles
+
+Le cadre est non coopératif et ne prend pas en compte :
+
+- les accords explicites ou tacites entre enchérisseurs,
+- ni les règles spécifiques de conception des mécanismes d’enchères.
+
+Ces éléments peuvent modifier substantiellement les résultats théoriques.
+
+## Portée empirique
+
+Enfin, les résultats dépendent étroitement des hypothèses retenues (valeurs privées ou communes, substituabilité des biens, ordre de vente).  
+Leur validité empirique doit être évaluée au cas par cas à l’aide de données ou d’analyses expérimentales.
+
+
+Ces limites suggèrent plusieurs prolongements:
+
+- l’introduction de contraintes budgétaires et de rationalité limitée,
+- l’étude d’enchères combinatoires ou hybrides,
+- et l’analyse empirique des enchères séquentielles observées sur les marchés réels.
+
+Elles soulignent que, si le cadre théorique est robuste, son enrichissement est nécessaire pour mieux rendre compte de la complexité des environnements concrets.

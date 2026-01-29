@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>_main.knit</title>
+  <title>6 Prolongement pour plusieurs biens | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="_main.knit" />
+  <meta property="og:title" content="6 Prolongement pour plusieurs biens | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="_main.knit" />
+  <meta name="twitter:title" content="6 Prolongement pour plusieurs biens | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-générale.html"/>
+<link rel="prev" href="exercice-pratique.html"/>
+<link rel="next" href="conclusion-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -145,92 +145,107 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="section" class="section level1 unnumbered">
-<h1 class="unnumbered"></h1>
-<div class="cover-page">
-
-  <!-- ====== LOGOS (VERTICAL) ====== -->
-  <div class="logos-stack">
-  
-      <div class="logo-block logo-ansd">
-      <div class="logo-caption">Agence nationale de la Statistique et de la Démographie</div>
-      <img src="images/LOGO2.jpg" alt="Logo ANSD Sénégal">
-      
-    </div>
-  
-  <div class="logo-sep" aria-hidden="true">
-    <span class="sep-line"></span>
-    <span class="sep-stars">✦ • ✦ • ✦ • ✦ • ✦ •</span>
-    <span class="sep-line"></span>
-  </div>
-
-    <div class="logo-block logo-ensae">
-      <div class="logo-caption">Ecole nationale de la Statistique et de l'Analyse économique Pierre Ndiaye</div>
-      <img src="images/LOGO1.jpg" alt="Logo ENSAE Dakar">
-    </div>
-
-    <div class="project-band">
-      <div class="project-band-text">
-        PROJET DE FIN DE MODULE<br>
-        <span>Théorie des jeux</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ====== CARTE PRINCIPALE ====== -->
-  <div class="cover-card">
-
-    <div class="cover-badge">ANNÉE ACADÉMIQUE 2025–2026</div>
-
-    <div class="cover-title"> Jeux dynamiques à information incomplète </div>
-
-    <div class="cover-subtitle">
-      Enchères séquentielles : stratégies dynamiques et information incomplète
-    </div>
-
-    <div class="cover-divider"></div>
-
-    <div class="cover-grid">
-
-      <div class="cover-box">
-        <div class="cover-kicker"> Élaboré par</div>
-        <div class="cover-names">
-          Awa DIAW<br/>
-        Sarah-Laure FOGWOUNG DJOUFACK<br/>
-        Fromo Francis HABA<br/>
-        Papa Amadou NIANG<br/>
-        Nihaviana Albert Paulinah RASAMOELINA
-        </div>
-        <div class="cover-note">
-          Ingénieurs Statisticiens Économistes<br>
-          <strong>En 2e année (ISE2)</strong>
-        </div>
-      </div>
-
-      <div class="cover-box">
-        <div class="cover-kicker">Sous la direction de</div>
-        <div class="cover-supervisor">M. Idrissa DIAGNE</div>
-        <div class="cover-note">
-          Enseignant de Théorie de jeux<br>
-          Directeur de l’ENSAE
-        </div>
-        <div class="cover-tag">Livrable de projet académique</div>
-      </div>
-
-    </div>
-
-    <div class="cover-tech">
-     Jeux Dynamiques • Signalisation • Equilibre Bayésien • Information incomplète
-    </div>
-
-  </div>
+<div id="prolongement-pour-plusieurs-biens" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Prolongement pour plusieurs biens<a href="prolongement-pour-plusieurs-biens.html#prolongement-pour-plusieurs-biens" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Lorsque plusieurs biens sont vendus successivement, l’enchère ne peut plus être analysée comme une simple répétition d’enchères indépendantes.<br />
+La <strong>dimension temporelle</strong> modifie profondément les incitations des enchérisseurs : chaque décision affecte non seulement l’allocation courante, mais aussi les opportunités futures.</p>
+<p>Cette section met en évidence les principaux mécanismes stratégiques qui émergent spécifiquement dans les enchères séquentielles multi-biens.</p>
+<hr />
+<div id="valeur-doption-et-arbitrage-intertemporel" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Valeur d’option et arbitrage intertemporel<a href="prolongement-pour-plusieurs-biens.html#valeur-doption-et-arbitrage-intertemporel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dans une enchère séquentielle, gagner un bien à une date donnée empêche de participer aux enchères ultérieures pour des biens potentiellement substituables.<br />
+Cette contrainte introduit une <strong>valeur d’option</strong> associée à l’attente.</p>
+<p>Un enchérisseur rationnel ne compare donc pas uniquement sa valorisation actuelle <span class="math inline">\(v_i\)</span> au prix courant, mais intègre également la valeur espérée des opportunités futures.<br />
+Son enchère effective au tour <span class="math inline">\(t\)</span> reflète ainsi un arbitrage intertemporel de la forme :
+<span class="math display">\[
+\text{disposition à payer} = v_i^{(t)} - \mathbb{E}[\text{gain futur}],
+\]</span>
+où l’espérance porte sur les enchères à venir.</p>
+<p>Cette logique explique une <strong>retenue stratégique</strong> précoce, même pour des enchérisseurs ayant une valorisation élevée du bien courant.</p>
+<hr />
+</div>
+<div id="effet-de-remplacement-et-dynamique-de-la-demande" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Effet de remplacement et dynamique de la demande<a href="prolongement-pour-plusieurs-biens.html#effet-de-remplacement-et-dynamique-de-la-demande" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Lorsque les biens vendus sont <strong>substituables</strong>, l’obtention d’un bien réduit l’utilité marginale des suivants.<br />
+C’est le <strong>remplacement inter-biens</strong>.</p>
+<ul>
+<li>Après avoir remporté un premier lot, un enchérisseur ajuste à la baisse son agressivité sur les lots suivants.</li>
+<li>À l’inverse, un enchérisseur ayant perdu un lot peut devenir plus agressif par nécessité de compensation.</li>
+</ul>
+<p>La demande n’est donc ni fixe ni indépendante : elle évolue endogènement au fil des adjudications.<br />
+Cette dynamique explique pourquoi les équilibres observés dans les enchères séquentielles diffèrent fondamentalement de ceux des enchères simultanées.</p>
+<hr />
+</div>
+<div id="révélation-progressive-de-linformation" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Révélation progressive de l’information<a href="prolongement-pour-plusieurs-biens.html#révélation-progressive-de-linformation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Les enchères séquentielles génèrent un <strong>processus endogène d’apprentissage</strong>.</p>
+<p>À chaque tour, le prix d’adjudication et l’identité du gagnant deviennent des informations publiques.<br />
+Les enchérisseurs restants utilisent ces observations pour mettre à jour leurs croyances sur :</p>
+<ul>
+<li>les valorisations privées,</li>
+<li>la capacité financière,</li>
+<li>ou l’intensité concurrentielle des autres participants.</li>
+</ul>
+<p>Cette mise à jour s’effectue selon la <strong>règle de Bayes</strong>, transformant progressivement l’environnement stratégique.</p>
+<div id="principe-de-liaison-milgrom-weber-1982" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Principe de liaison (Milgrom &amp; Weber, 1982)<a href="prolongement-pour-plusieurs-biens.html#principe-de-liaison-milgrom-weber-1982" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Lorsque les actions révèlent de l’information pertinente, la transparence tend à :</p>
+<ul>
+<li>réduire l’incertitude,</li>
+<li>accroître l’agressivité des enchères,</li>
+<li>augmenter le revenu espéré du vendeur.</li>
+</ul>
+<p>Ce mécanisme explique pourquoi les enchères ouvertes et séquentielles peuvent dominer les formats scellés dans certains contextes.</p>
+<hr />
+</div>
+</div>
+<div id="signalisation-intimidation-et-comportements-stratégiques" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Signalisation, intimidation et comportements stratégiques<a href="prolongement-pour-plusieurs-biens.html#signalisation-intimidation-et-comportements-stratégiques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La répétition des interactions permet l’émergence de stratégies de <strong>signalisation</strong>.</p>
+<div id="jump-bidding" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Jump bidding<a href="prolongement-pour-plusieurs-biens.html#jump-bidding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un enchérisseur peut soumettre volontairement une enchère très supérieure au minimum requis afin de :</p>
+<ul>
+<li>signaler une valorisation élevée,</li>
+<li>décourager les concurrents,</li>
+<li>raccourcir la durée de l’enchère.</li>
+</ul>
+<p>Ce comportement peut être rationnel s’il réduit la concurrence future à un coût acceptable.</p>
+</div>
+<div id="stratégies-de-prédation" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Stratégies de prédation<a href="prolongement-pour-plusieurs-biens.html#stratégies-de-prédation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dans certains contextes, un acteur dominant peut accepter de <strong>surpayer un premier bien</strong> pour provoquer la sortie de concurrents plus faibles.<br />
+Le surpaiement initial devient alors un investissement stratégique visant à améliorer la position concurrentielle sur les enchères suivantes.</p>
+<hr />
+</div>
+</div>
+<div id="malédiction-du-vainqueur-et-effets-dynamiques" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Malédiction du vainqueur et effets dynamiques<a href="prolongement-pour-plusieurs-biens.html#malédiction-du-vainqueur-et-effets-dynamiques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dans les enchères à <strong>valeurs communes</strong>, la séquentialité amplifie la malédiction du vainqueur.</p>
+<ul>
+<li>Remporter un premier bien révèle une estimation relativement optimiste.</li>
+<li>Ex post, le gagnant infère que les autres enchérisseurs avaient des évaluations plus faibles.</li>
+<li>Les enchères ultérieures sont alors abordées avec davantage de prudence.</li>
+</ul>
+<p>Cette dynamique peut conduire à une baisse progressive des prix, même pour des biens identiques.</p>
+<hr />
+</div>
+<div id="baisse-des-prix-et-paradoxe-de-lenchère-déclinante" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Baisse des prix et paradoxe de l’enchère déclinante<a href="prolongement-pour-plusieurs-biens.html#baisse-des-prix-et-paradoxe-de-lenchère-déclinante" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Empiriquement, on observe fréquemment que des biens identiques vendus successivement le sont à des prix décroissants, phénomène parfois appelé <em>afternoon effect</em>.</p>
+<p>Plusieurs mécanismes contribuent à ce résultat :</p>
+<ul>
+<li><strong>Diminution de la concurrence</strong> : chaque adjudication élimine un enchérisseur potentiel.</li>
+<li><strong>Aversion au risque</strong> : certains acheteurs acceptent de payer plus tôt pour éviter l’incertitude.</li>
+<li><strong>Fatigue stratégique</strong> : la durée et le coût cognitif de la participation réduisent l’agressivité des offres.</li>
+</ul>
+<p>Ce paradoxe souligne que les prix séquentiels reflètent autant la structure stratégique que les caractéristiques intrinsèques des biens.</p>
+<p>Les enchères séquentielles à plusieurs biens mettent en évidence que :
+- les décisions sont fondamentalement intertemporelles,
+- l’information est révélée de manière progressive,
+- les stratégies combinent arbitrage, signalisation et anticipation.</p>
 
 </div>
-
-
 </div>
 <div class="full-width-wrapper">
 <footer style="margin-top: 5em; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
@@ -292,8 +307,8 @@
           </div>
         </div>
       </div>
-
-<a href="introduction-générale.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercice-pratique.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

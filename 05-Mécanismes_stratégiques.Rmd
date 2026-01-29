@@ -1,0 +1,113 @@
+
+# Prolongement pour plusieurs biens
+
+Lorsque plusieurs biens sont vendus successivement, l’enchère ne peut plus être analysée comme une simple répétition d’enchères indépendantes.  
+La **dimension temporelle** modifie profondément les incitations des enchérisseurs : chaque décision affecte non seulement l’allocation courante, mais aussi les opportunités futures.
+
+Cette section met en évidence les principaux mécanismes stratégiques qui émergent spécifiquement dans les enchères séquentielles multi-biens.
+
+---
+
+## Valeur d’option et arbitrage intertemporel
+
+Dans une enchère séquentielle, gagner un bien à une date donnée empêche de participer aux enchères ultérieures pour des biens potentiellement substituables.  
+Cette contrainte introduit une **valeur d’option** associée à l’attente.
+
+Un enchérisseur rationnel ne compare donc pas uniquement sa valorisation actuelle \( v_i \) au prix courant, mais intègre également la valeur espérée des opportunités futures.  
+Son enchère effective au tour \( t \) reflète ainsi un arbitrage intertemporel de la forme :
+\[
+\text{disposition à payer} = v_i^{(t)} - \mathbb{E}[\text{gain futur}],
+\]
+où l’espérance porte sur les enchères à venir.
+
+Cette logique explique une **retenue stratégique** précoce, même pour des enchérisseurs ayant une valorisation élevée du bien courant.
+
+---
+
+## Effet de remplacement et dynamique de la demande
+
+Lorsque les biens vendus sont **substituables**, l’obtention d’un bien réduit l’utilité marginale des suivants.  
+C’est le **remplacement inter-biens**.
+
+- Après avoir remporté un premier lot, un enchérisseur ajuste à la baisse son agressivité sur les lots suivants.
+- À l’inverse, un enchérisseur ayant perdu un lot peut devenir plus agressif par nécessité de compensation.
+
+La demande n’est donc ni fixe ni indépendante : elle évolue endogènement au fil des adjudications.  
+Cette dynamique explique pourquoi les équilibres observés dans les enchères séquentielles diffèrent fondamentalement de ceux des enchères simultanées.
+
+---
+
+## Révélation progressive de l’information
+
+Les enchères séquentielles génèrent un **processus endogène d’apprentissage**.
+
+À chaque tour, le prix d’adjudication et l’identité du gagnant deviennent des informations publiques.  
+Les enchérisseurs restants utilisent ces observations pour mettre à jour leurs croyances sur :
+
+- les valorisations privées,
+- la capacité financière,
+- ou l’intensité concurrentielle des autres participants.
+
+Cette mise à jour s’effectue selon la **règle de Bayes**, transformant progressivement l’environnement stratégique.
+
+### Principe de liaison (Milgrom & Weber, 1982)
+
+Lorsque les actions révèlent de l’information pertinente, la transparence tend à :
+
+- réduire l’incertitude,
+- accroître l’agressivité des enchères,
+- augmenter le revenu espéré du vendeur.
+
+Ce mécanisme explique pourquoi les enchères ouvertes et séquentielles peuvent dominer les formats scellés dans certains contextes.
+
+---
+
+## Signalisation, intimidation et comportements stratégiques
+
+La répétition des interactions permet l’émergence de stratégies de **signalisation**.
+
+### Jump bidding
+
+Un enchérisseur peut soumettre volontairement une enchère très supérieure au minimum requis afin de :
+
+- signaler une valorisation élevée,
+- décourager les concurrents,
+- raccourcir la durée de l’enchère.
+
+Ce comportement peut être rationnel s’il réduit la concurrence future à un coût acceptable.
+
+### Stratégies de prédation
+
+Dans certains contextes, un acteur dominant peut accepter de **surpayer un premier bien** pour provoquer la sortie de concurrents plus faibles.  
+Le surpaiement initial devient alors un investissement stratégique visant à améliorer la position concurrentielle sur les enchères suivantes.
+
+---
+
+## Malédiction du vainqueur et effets dynamiques
+
+Dans les enchères à **valeurs communes**, la séquentialité amplifie la malédiction du vainqueur.
+
+- Remporter un premier bien révèle une estimation relativement optimiste.
+- Ex post, le gagnant infère que les autres enchérisseurs avaient des évaluations plus faibles.
+- Les enchères ultérieures sont alors abordées avec davantage de prudence.
+
+Cette dynamique peut conduire à une baisse progressive des prix, même pour des biens identiques.
+
+---
+
+## Baisse des prix et paradoxe de l’enchère déclinante
+
+Empiriquement, on observe fréquemment que des biens identiques vendus successivement le sont à des prix décroissants, phénomène parfois appelé *afternoon effect*.
+
+Plusieurs mécanismes contribuent à ce résultat :
+
+- **Diminution de la concurrence** : chaque adjudication élimine un enchérisseur potentiel.
+- **Aversion au risque** : certains acheteurs acceptent de payer plus tôt pour éviter l’incertitude.
+- **Fatigue stratégique** : la durée et le coût cognitif de la participation réduisent l’agressivité des offres.
+
+Ce paradoxe souligne que les prix séquentiels reflètent autant la structure stratégique que les caractéristiques intrinsèques des biens.
+
+Les enchères séquentielles à plusieurs biens mettent en évidence que :
+- les décisions sont fondamentalement intertemporelles,
+- l’information est révélée de manière progressive,
+- les stratégies combinent arbitrage, signalisation et anticipation.
